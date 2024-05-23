@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB61A27A2BFFE62000E1010E /* MyAccountsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2792BFFE62000E1010E /* MyAccountsView.swift */; };
+		DB61A27C2BFFE64300E1010E /* SimulationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A27B2BFFE64300E1010E /* SimulationView.swift */; };
+		DB61A27E2BFFE65800E1010E /* UpToYouView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A27D2BFFE65800E1010E /* UpToYouView.swift */; };
+		DB61A2862BFFEE8800E1010E /* BanksResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2852BFFEE8800E1010E /* BanksResponse.swift */; };
 		DB8C4B6F2BFE7752008E3335 /* BanksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8C4B6E2BFE7752008E3335 /* BanksApp.swift */; };
 		DB8C4B712BFE7752008E3335 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8C4B702BFE7752008E3335 /* ContentView.swift */; };
 		DB8C4B732BFE7755008E3335 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB8C4B722BFE7755008E3335 /* Assets.xcassets */; };
@@ -34,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DB61A2792BFFE62000E1010E /* MyAccountsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountsView.swift; sourceTree = "<group>"; };
+		DB61A27B2BFFE64300E1010E /* SimulationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationView.swift; sourceTree = "<group>"; };
+		DB61A27D2BFFE65800E1010E /* UpToYouView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpToYouView.swift; sourceTree = "<group>"; };
+		DB61A2852BFFEE8800E1010E /* BanksResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanksResponse.swift; sourceTree = "<group>"; };
 		DB8C4B6B2BFE7752008E3335 /* Banks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Banks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB8C4B6E2BFE7752008E3335 /* BanksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanksApp.swift; sourceTree = "<group>"; };
 		DB8C4B702BFE7752008E3335 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -71,6 +79,63 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB61A2782BFFE60C00E1010E /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				DB61A27F2BFFE7D500E1010E /* MyAccounts */,
+				DB61A2802BFFE7F500E1010E /* Simulation */,
+				DB61A2812BFFE82000E1010E /* UpToYou */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		DB61A27F2BFFE7D500E1010E /* MyAccounts */ = {
+			isa = PBXGroup;
+			children = (
+				DB61A2792BFFE62000E1010E /* MyAccountsView.swift */,
+			);
+			path = MyAccounts;
+			sourceTree = "<group>";
+		};
+		DB61A2802BFFE7F500E1010E /* Simulation */ = {
+			isa = PBXGroup;
+			children = (
+				DB61A27B2BFFE64300E1010E /* SimulationView.swift */,
+			);
+			path = Simulation;
+			sourceTree = "<group>";
+		};
+		DB61A2812BFFE82000E1010E /* UpToYou */ = {
+			isa = PBXGroup;
+			children = (
+				DB61A27D2BFFE65800E1010E /* UpToYouView.swift */,
+			);
+			path = UpToYou;
+			sourceTree = "<group>";
+		};
+		DB61A2822BFFE9C800E1010E /* App */ = {
+			isa = PBXGroup;
+			children = (
+				DB8C4B6E2BFE7752008E3335 /* BanksApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		DB61A2832BFFE9DF00E1010E /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		DB61A2842BFFE9FD00E1010E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DB61A2852BFFEE8800E1010E /* BanksResponse.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		DB8C4B622BFE7751008E3335 = {
 			isa = PBXGroup;
 			children = (
@@ -94,8 +159,11 @@
 		DB8C4B6D2BFE7752008E3335 /* Banks */ = {
 			isa = PBXGroup;
 			children = (
-				DB8C4B6E2BFE7752008E3335 /* BanksApp.swift */,
+				DB61A2822BFFE9C800E1010E /* App */,
 				DB8C4B702BFE7752008E3335 /* ContentView.swift */,
+				DB61A2842BFFE9FD00E1010E /* Models */,
+				DB61A2832BFFE9DF00E1010E /* Networking */,
+				DB61A2782BFFE60C00E1010E /* Screens */,
 				DB8C4B722BFE7755008E3335 /* Assets.xcassets */,
 				DB8C4B742BFE7755008E3335 /* Preview Content */,
 			);
@@ -259,6 +327,10 @@
 			files = (
 				DB8C4B712BFE7752008E3335 /* ContentView.swift in Sources */,
 				DB8C4B6F2BFE7752008E3335 /* BanksApp.swift in Sources */,
+				DB61A27E2BFFE65800E1010E /* UpToYouView.swift in Sources */,
+				DB61A27A2BFFE62000E1010E /* MyAccountsView.swift in Sources */,
+				DB61A2862BFFEE8800E1010E /* BanksResponse.swift in Sources */,
+				DB61A27C2BFFE64300E1010E /* SimulationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
