@@ -5,7 +5,6 @@
 //  Created by Wajih Benabdessalem on 5/23/24.
 //
 
-
 import Foundation
 
 typealias AccountsResponse = [Accounts]

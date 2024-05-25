@@ -13,6 +13,9 @@ struct UpToYouView: View {
     }
 }
 
+// MARK: - Previews
+#if DEBUG
 #Preview {
     UpToYouView()
 }
+#endif

@@ -78,7 +78,8 @@ extension ContentView {
 }
 
 // MARK: - Previews
-
+#if DEBUG
 #Preview {
     ContentView(selectedTabIndex: 0)
 }
+#endif

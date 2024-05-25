@@ -11,6 +11,17 @@
 		DB61A27C2BFFE64300E1010E /* SimulationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A27B2BFFE64300E1010E /* SimulationView.swift */; };
 		DB61A27E2BFFE65800E1010E /* UpToYouView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A27D2BFFE65800E1010E /* UpToYouView.swift */; };
 		DB61A2862BFFEE8800E1010E /* BanksResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2852BFFEE8800E1010E /* BanksResponse.swift */; };
+		DB61A28D2BFFF4FD00E1010E /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2872BFFF4FC00E1010E /* ApiClient.swift */; };
+		DB61A28E2BFFF4FD00E1010E /* AccountsClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2882BFFF4FC00E1010E /* AccountsClient.swift */; };
+		DB61A28F2BFFF4FD00E1010E /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A28A2BFFF4FD00E1010E /* EndPoint.swift */; };
+		DB61A2902BFFF4FD00E1010E /* AccountsEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A28B2BFFF4FD00E1010E /* AccountsEndPoint.swift */; };
+		DB61A2952BFFF5D100E1010E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2932BFFF5D100E1010E /* Constants.swift */; };
+		DB61A29C2BFFF7FE00E1010E /* Data+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2972BFFF7FE00E1010E /* Data+extension.swift */; };
+		DB61A2A02C00D3A700E1010E /* banks.json in Resources */ = {isa = PBXBuildFile; fileRef = DB61A29F2C00D3A600E1010E /* banks.json */; };
+		DB61A2A32C00D46C00E1010E /* MyAccountsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2A22C00D46C00E1010E /* MyAccountsViewModel.swift */; };
+		DB61A2A62C0103F300E1010E /* BankRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2A52C0103F300E1010E /* BankRowView.swift */; };
+		DB61A2A92C01045300E1010E /* BankItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2A82C01045300E1010E /* BankItemView.swift */; };
+		DB61A2AC2C012A8300E1010E /* AccountSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2AB2C012A8300E1010E /* AccountSection.swift */; };
 		DB8C4B6F2BFE7752008E3335 /* BanksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8C4B6E2BFE7752008E3335 /* BanksApp.swift */; };
 		DB8C4B712BFE7752008E3335 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8C4B702BFE7752008E3335 /* ContentView.swift */; };
 		DB8C4B732BFE7755008E3335 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB8C4B722BFE7755008E3335 /* Assets.xcassets */; };
@@ -42,6 +53,17 @@
 		DB61A27B2BFFE64300E1010E /* SimulationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationView.swift; sourceTree = "<group>"; };
 		DB61A27D2BFFE65800E1010E /* UpToYouView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpToYouView.swift; sourceTree = "<group>"; };
 		DB61A2852BFFEE8800E1010E /* BanksResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanksResponse.swift; sourceTree = "<group>"; };
+		DB61A2872BFFF4FC00E1010E /* ApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		DB61A2882BFFF4FC00E1010E /* AccountsClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountsClient.swift; sourceTree = "<group>"; };
+		DB61A28A2BFFF4FD00E1010E /* EndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
+		DB61A28B2BFFF4FD00E1010E /* AccountsEndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountsEndPoint.swift; sourceTree = "<group>"; };
+		DB61A2932BFFF5D100E1010E /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		DB61A2972BFFF7FE00E1010E /* Data+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+extension.swift"; sourceTree = "<group>"; };
+		DB61A29F2C00D3A600E1010E /* banks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = banks.json; sourceTree = "<group>"; };
+		DB61A2A22C00D46C00E1010E /* MyAccountsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountsViewModel.swift; sourceTree = "<group>"; };
+		DB61A2A52C0103F300E1010E /* BankRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankRowView.swift; sourceTree = "<group>"; };
+		DB61A2A82C01045300E1010E /* BankItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankItemView.swift; sourceTree = "<group>"; };
+		DB61A2AB2C012A8300E1010E /* AccountSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSection.swift; sourceTree = "<group>"; };
 		DB8C4B6B2BFE7752008E3335 /* Banks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Banks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB8C4B6E2BFE7752008E3335 /* BanksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanksApp.swift; sourceTree = "<group>"; };
 		DB8C4B702BFE7752008E3335 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -82,6 +104,7 @@
 		DB61A2782BFFE60C00E1010E /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				DB8C4B702BFE7752008E3335 /* ContentView.swift */,
 				DB61A27F2BFFE7D500E1010E /* MyAccounts */,
 				DB61A2802BFFE7F500E1010E /* Simulation */,
 				DB61A2812BFFE82000E1010E /* UpToYou */,
@@ -92,7 +115,8 @@
 		DB61A27F2BFFE7D500E1010E /* MyAccounts */ = {
 			isa = PBXGroup;
 			children = (
-				DB61A2792BFFE62000E1010E /* MyAccountsView.swift */,
+				DB61A2A42C0103D800E1010E /* View */,
+				DB61A2AA2C01049100E1010E /* ViewModel */,
 			);
 			path = MyAccounts;
 			sourceTree = "<group>";
@@ -124,6 +148,8 @@
 		DB61A2832BFFE9DF00E1010E /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				DB61A2892BFFF4FC00E1010E /* ApiClients */,
+				DB61A28C2BFFF4FD00E1010E /* EndPoints */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -134,6 +160,75 @@
 				DB61A2852BFFEE8800E1010E /* BanksResponse.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		DB61A2892BFFF4FC00E1010E /* ApiClients */ = {
+			isa = PBXGroup;
+			children = (
+				DB61A2872BFFF4FC00E1010E /* ApiClient.swift */,
+				DB61A2882BFFF4FC00E1010E /* AccountsClient.swift */,
+			);
+			path = ApiClients;
+			sourceTree = "<group>";
+		};
+		DB61A28C2BFFF4FD00E1010E /* EndPoints */ = {
+			isa = PBXGroup;
+			children = (
+				DB61A28A2BFFF4FD00E1010E /* EndPoint.swift */,
+				DB61A28B2BFFF4FD00E1010E /* AccountsEndPoint.swift */,
+			);
+			path = EndPoints;
+			sourceTree = "<group>";
+		};
+		DB61A2942BFFF5D100E1010E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				DB61A2932BFFF5D100E1010E /* Constants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		DB61A29A2BFFF7FE00E1010E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DB61A2972BFFF7FE00E1010E /* Data+extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DB61A2A12C00D3B200E1010E /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
+				DB8C4B722BFE7755008E3335 /* Assets.xcassets */,
+				DB61A29F2C00D3A600E1010E /* banks.json */,
+			);
+			path = Ressources;
+			sourceTree = "<group>";
+		};
+		DB61A2A42C0103D800E1010E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DB61A2792BFFE62000E1010E /* MyAccountsView.swift */,
+				DB61A2A52C0103F300E1010E /* BankRowView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DB61A2AA2C01049100E1010E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DB61A2A22C00D46C00E1010E /* MyAccountsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DB61A2AD2C012AF300E1010E /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				DB61A2A82C01045300E1010E /* BankItemView.swift */,
+				DB61A2AB2C012A8300E1010E /* AccountSection.swift */,
+			);
+			path = UIComponents;
 			sourceTree = "<group>";
 		};
 		DB8C4B622BFE7751008E3335 = {
@@ -160,11 +255,13 @@
 			isa = PBXGroup;
 			children = (
 				DB61A2822BFFE9C800E1010E /* App */,
-				DB8C4B702BFE7752008E3335 /* ContentView.swift */,
 				DB61A2842BFFE9FD00E1010E /* Models */,
 				DB61A2832BFFE9DF00E1010E /* Networking */,
 				DB61A2782BFFE60C00E1010E /* Screens */,
-				DB8C4B722BFE7755008E3335 /* Assets.xcassets */,
+				DB61A2AD2C012AF300E1010E /* UIComponents */,
+				DB61A2942BFFF5D100E1010E /* Utils */,
+				DB61A29A2BFFF7FE00E1010E /* Extensions */,
+				DB61A2A12C00D3B200E1010E /* Ressources */,
 				DB8C4B742BFE7755008E3335 /* Preview Content */,
 			);
 			path = Banks;
@@ -300,6 +397,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB8C4B762BFE7755008E3335 /* Preview Assets.xcassets in Resources */,
+				DB61A2A02C00D3A700E1010E /* banks.json in Resources */,
 				DB8C4B732BFE7755008E3335 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -325,12 +423,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB61A28D2BFFF4FD00E1010E /* ApiClient.swift in Sources */,
+				DB61A2AC2C012A8300E1010E /* AccountSection.swift in Sources */,
+				DB61A2A32C00D46C00E1010E /* MyAccountsViewModel.swift in Sources */,
+				DB61A2952BFFF5D100E1010E /* Constants.swift in Sources */,
 				DB8C4B712BFE7752008E3335 /* ContentView.swift in Sources */,
+				DB61A2A92C01045300E1010E /* BankItemView.swift in Sources */,
 				DB8C4B6F2BFE7752008E3335 /* BanksApp.swift in Sources */,
+				DB61A28F2BFFF4FD00E1010E /* EndPoint.swift in Sources */,
+				DB61A28E2BFFF4FD00E1010E /* AccountsClient.swift in Sources */,
 				DB61A27E2BFFE65800E1010E /* UpToYouView.swift in Sources */,
+				DB61A29C2BFFF7FE00E1010E /* Data+extension.swift in Sources */,
 				DB61A27A2BFFE62000E1010E /* MyAccountsView.swift in Sources */,
+				DB61A2902BFFF4FD00E1010E /* AccountsEndPoint.swift in Sources */,
 				DB61A2862BFFEE8800E1010E /* BanksResponse.swift in Sources */,
 				DB61A27C2BFFE64300E1010E /* SimulationView.swift in Sources */,
+				DB61A2A62C0103F300E1010E /* BankRowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,6 +617,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = benabdessalemwajih.dev.Banks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -538,6 +650,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = benabdessalemwajih.dev.Banks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
