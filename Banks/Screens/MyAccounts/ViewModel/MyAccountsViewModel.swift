@@ -22,8 +22,12 @@ class MyAccountsViewModel: ObservableObject {
         do {
             let fetchedAccounts = try await accountsService.fetchAccounts()
             await MainActor.run {
-                caAccounts = fetchedAccounts.filter({ bank in bank.isCA == 1 })
-                otherAccounts = fetchedAccounts.filter({ bank in bank.isCA == 0 })
+                caAccounts = fetchedAccounts
+                    .filter({ bank in bank.isCA == 1 })
+                    .sorted { $0.name.lowercased() < $1.name.lowercased() }
+                otherAccounts = fetchedAccounts
+                    .filter({ bank in bank.isCA == 0 })
+                    .sorted { $0.name.lowercased() < $1.name.lowercased() }
             }
         } catch  {
             print(error.localizedDescription)
