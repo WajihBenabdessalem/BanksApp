@@ -22,6 +22,13 @@
 		DB61A2A62C0103F300E1010E /* BankRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2A52C0103F300E1010E /* BankRowView.swift */; };
 		DB61A2A92C01045300E1010E /* BankItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2A82C01045300E1010E /* BankItemView.swift */; };
 		DB61A2AC2C012A8300E1010E /* AccountSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2AB2C012A8300E1010E /* AccountSection.swift */; };
+		DB61A2B02C0211F800E1010E /* AccountDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2AF2C0211F800E1010E /* AccountDetailView.swift */; };
+		DB61A2B42C02124800E1010E /* AccountDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2B32C02124800E1010E /* AccountDetailViewModel.swift */; };
+		DB61A2B62C02141700E1010E /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2B52C02141700E1010E /* MockData.swift */; };
+		DB61A2B92C02224200E1010E /* String+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2B82C02224200E1010E /* String+extension.swift */; };
+		DB61A2BB2C0231DA00E1010E /* OperationRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2BA2C0231DA00E1010E /* OperationRowView.swift */; };
+		DB61A2BD2C02917100E1010E /* Date+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2BC2C02917100E1010E /* Date+extension.swift */; };
+		DB61A2BF2C036B7500E1010E /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2BE2C036B7500E1010E /* Coordinator.swift */; };
 		DB8C4B6F2BFE7752008E3335 /* BanksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8C4B6E2BFE7752008E3335 /* BanksApp.swift */; };
 		DB8C4B712BFE7752008E3335 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8C4B702BFE7752008E3335 /* ContentView.swift */; };
 		DB8C4B732BFE7755008E3335 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB8C4B722BFE7755008E3335 /* Assets.xcassets */; };
@@ -64,6 +71,13 @@
 		DB61A2A52C0103F300E1010E /* BankRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankRowView.swift; sourceTree = "<group>"; };
 		DB61A2A82C01045300E1010E /* BankItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankItemView.swift; sourceTree = "<group>"; };
 		DB61A2AB2C012A8300E1010E /* AccountSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSection.swift; sourceTree = "<group>"; };
+		DB61A2AF2C0211F800E1010E /* AccountDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetailView.swift; sourceTree = "<group>"; };
+		DB61A2B32C02124800E1010E /* AccountDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetailViewModel.swift; sourceTree = "<group>"; };
+		DB61A2B52C02141700E1010E /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		DB61A2B82C02224200E1010E /* String+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+extension.swift"; sourceTree = "<group>"; };
+		DB61A2BA2C0231DA00E1010E /* OperationRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationRowView.swift; sourceTree = "<group>"; };
+		DB61A2BC2C02917100E1010E /* Date+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+extension.swift"; sourceTree = "<group>"; };
+		DB61A2BE2C036B7500E1010E /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		DB8C4B6B2BFE7752008E3335 /* Banks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Banks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB8C4B6E2BFE7752008E3335 /* BanksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanksApp.swift; sourceTree = "<group>"; };
 		DB8C4B702BFE7752008E3335 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -106,6 +120,7 @@
 			children = (
 				DB8C4B702BFE7752008E3335 /* ContentView.swift */,
 				DB61A27F2BFFE7D500E1010E /* MyAccounts */,
+				DB61A2AE2C0211C300E1010E /* AccountDetail */,
 				DB61A2802BFFE7F500E1010E /* Simulation */,
 				DB61A2812BFFE82000E1010E /* UpToYou */,
 			);
@@ -192,6 +207,8 @@
 			isa = PBXGroup;
 			children = (
 				DB61A2972BFFF7FE00E1010E /* Data+extension.swift */,
+				DB61A2B82C02224200E1010E /* String+extension.swift */,
+				DB61A2BC2C02917100E1010E /* Date+extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -231,6 +248,40 @@
 			path = UIComponents;
 			sourceTree = "<group>";
 		};
+		DB61A2AE2C0211C300E1010E /* AccountDetail */ = {
+			isa = PBXGroup;
+			children = (
+				DB61A2B12C02120800E1010E /* View */,
+				DB61A2B22C02121E00E1010E /* ViewModel */,
+			);
+			path = AccountDetail;
+			sourceTree = "<group>";
+		};
+		DB61A2B12C02120800E1010E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DB61A2AF2C0211F800E1010E /* AccountDetailView.swift */,
+				DB61A2BA2C0231DA00E1010E /* OperationRowView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DB61A2B22C02121E00E1010E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DB61A2B32C02124800E1010E /* AccountDetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DB61A2B72C02146A00E1010E /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				DB61A2B52C02141700E1010E /* MockData.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		DB8C4B622BFE7751008E3335 = {
 			isa = PBXGroup;
 			children = (
@@ -257,9 +308,11 @@
 				DB61A2822BFFE9C800E1010E /* App */,
 				DB61A2842BFFE9FD00E1010E /* Models */,
 				DB61A2832BFFE9DF00E1010E /* Networking */,
+				DBDE085E2C0395EC00DBC90F /* AppCoordinator */,
 				DB61A2782BFFE60C00E1010E /* Screens */,
 				DB61A2AD2C012AF300E1010E /* UIComponents */,
 				DB61A2942BFFF5D100E1010E /* Utils */,
+				DB61A2B72C02146A00E1010E /* Helper */,
 				DB61A29A2BFFF7FE00E1010E /* Extensions */,
 				DB61A2A12C00D3B200E1010E /* Ressources */,
 				DB8C4B742BFE7755008E3335 /* Preview Content */,
@@ -290,6 +343,14 @@
 				DB8C4B8B2BFE7756008E3335 /* BanksUITestsLaunchTests.swift */,
 			);
 			path = BanksUITests;
+			sourceTree = "<group>";
+		};
+		DBDE085E2C0395EC00DBC90F /* AppCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				DB61A2BE2C036B7500E1010E /* Coordinator.swift */,
+			);
+			path = AppCoordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -430,14 +491,21 @@
 				DB8C4B712BFE7752008E3335 /* ContentView.swift in Sources */,
 				DB61A2A92C01045300E1010E /* BankItemView.swift in Sources */,
 				DB8C4B6F2BFE7752008E3335 /* BanksApp.swift in Sources */,
+				DB61A2BD2C02917100E1010E /* Date+extension.swift in Sources */,
 				DB61A28F2BFFF4FD00E1010E /* EndPoint.swift in Sources */,
+				DB61A2BB2C0231DA00E1010E /* OperationRowView.swift in Sources */,
+				DB61A2B62C02141700E1010E /* MockData.swift in Sources */,
 				DB61A28E2BFFF4FD00E1010E /* AccountsClient.swift in Sources */,
+				DB61A2B42C02124800E1010E /* AccountDetailViewModel.swift in Sources */,
 				DB61A27E2BFFE65800E1010E /* UpToYouView.swift in Sources */,
 				DB61A29C2BFFF7FE00E1010E /* Data+extension.swift in Sources */,
 				DB61A27A2BFFE62000E1010E /* MyAccountsView.swift in Sources */,
 				DB61A2902BFFF4FD00E1010E /* AccountsEndPoint.swift in Sources */,
+				DB61A2BF2C036B7500E1010E /* Coordinator.swift in Sources */,
 				DB61A2862BFFEE8800E1010E /* BanksResponse.swift in Sources */,
 				DB61A27C2BFFE64300E1010E /* SimulationView.swift in Sources */,
+				DB61A2B92C02224200E1010E /* String+extension.swift in Sources */,
+				DB61A2B02C0211F800E1010E /* AccountDetailView.swift in Sources */,
 				DB61A2A62C0103F300E1010E /* BankRowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

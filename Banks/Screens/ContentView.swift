@@ -9,16 +9,20 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @StateObject var coordinator = Coordinator()
     @State var selectedTabIndex: Int
     
     var body: some View {
         TabView(selection: $selectedTabIndex) {
             ForEach(Tab.allCases) { tab in
-                NavigationStack {
+                NavigationStack(path: $coordinator.path) {
                     switch tab {
                     case .myAccounts:
-                        MyAccountsView()
-                            .navigationTitle(tab.title)
+                        MyAccountsView(viewModel: MyAccountsViewModel(coordinator: coordinator, accountsService: AccountsClient()))
+                        .navigationTitle(tab.title)
+                        .navigationDestination(for: Account.self) { account in
+                            AccountDetailView(viewModel: AccountDetailViewModel(account: account))
+                        }
                     case .simulation:
                         SimulationView()
                             .navigationTitle(tab.title)
@@ -78,8 +82,8 @@ extension ContentView {
 }
 
 // MARK: - Previews
-#if DEBUG
 #Preview {
-    ContentView(selectedTabIndex: 0)
+    NavigationStack {
+        ContentView(selectedTabIndex: 0)
+    }
 }
-#endif

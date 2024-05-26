@@ -9,14 +9,18 @@ import SwiftUI
 
 struct MyAccountsView: View {
     
-    @StateObject var viewModel = MyAccountsViewModel(accountsService: AccountsClient())
+    @StateObject var viewModel: MyAccountsViewModel
 
     var body: some View {
         List {
-            AccountSection(header: "Credit Agricole", 
-                           accounts: viewModel.caAccounts)
-            AccountSection(header: "Autres Banques",
-                           accounts: viewModel.otherAccounts)
+            AccountSection(header: AppString.caAccount,
+                           accounts: viewModel.caAccounts){ account in
+                viewModel.showAccountDetail(account: account)
+            }
+            AccountSection(header: AppString.otherAccount,
+                           accounts: viewModel.otherAccounts){ account in
+                viewModel.showAccountDetail(account: account)
+            }
         }
         .listStyle(.sidebar)
         .task {
@@ -26,8 +30,13 @@ struct MyAccountsView: View {
 }
 
 // MARK: - Previews
-#if DEBUG
 #Preview {
-    MyAccountsView(viewModel: MyAccountsViewModel(accountsService: AccountsClient()))
+    NavigationStack {
+        MyAccountsView(
+            viewModel: MyAccountsViewModel(
+                coordinator: Coordinator(),
+                accountsService: AccountsClient()
+            )
+        )
+    }
 }
-#endif

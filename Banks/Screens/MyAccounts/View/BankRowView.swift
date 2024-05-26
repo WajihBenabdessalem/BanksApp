@@ -11,14 +11,19 @@ struct BankRowView: View {
     
     let title: String
     let accounts: [Account]
-    
+    let action: (Account) -> Void
+
     var body: some View {
         Section {
             DisclosureGroup {
                 Group {
                     ForEach(accounts, id: \.id) { account in
-                        BankItemView(title: account.label, 
-                                     price: "\(account.balance) €")
+                        Button {
+                            action(account)
+                        } label: {
+                            BankItemView(title: account.label,
+                                         price: account.accountBalance)
+                        }
                     }
                 }
                 .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
@@ -33,9 +38,9 @@ struct BankRowView: View {
 }
 
 // MARK: - Previews
-#if DEBUG
 #Preview {
-    BankRowView(title: "Account title", accounts: [])
+    BankRowView(title: "Account title", 
+                accounts: MockData.accounts,
+                action: { account in })
         .padding(.horizontal)
 }
-#endif

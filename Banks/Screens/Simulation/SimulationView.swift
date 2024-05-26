@@ -14,8 +14,6 @@ struct SimulationView: View {
 }
 
 // MARK: - Previews
-#if DEBUG
 #Preview {
     SimulationView()
 }
-#endif

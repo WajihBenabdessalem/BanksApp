@@ -11,6 +11,7 @@ struct AccountSection: View {
     
     let header: String
     let accounts: [Accounts]
+    let action: (Account) -> Void
 
     var body: some View {
         Section(header:
@@ -19,7 +20,9 @@ struct AccountSection: View {
              .padding(.leading,-16)
         ) {
             ForEach(accounts, id: \.name) { bank in
-                BankRowView(title: bank.name, accounts: bank.accounts)
+                BankRowView(title: bank.name, 
+                            accounts: bank.accounts){ account in action(account)
+                }
             }
         }
         .headerProminence(.increased)
@@ -27,8 +30,6 @@ struct AccountSection: View {
 }
 
 // MARK: - Previews
-#if DEBUG
 #Preview {
-    AccountSection(header: "Credit Agricole", accounts: [])
+    AccountSection(header: "Credit Agricole", accounts: [], action: {_ in})
 }
-#endif

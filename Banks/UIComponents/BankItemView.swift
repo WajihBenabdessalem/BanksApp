@@ -30,8 +30,6 @@ struct BankItemView: View {
     }
 }
 // MARK: - Previews
-#if DEBUG
 #Preview {
     BankItemView(title: "Account title", price: "12345.67 €")
 }
-#endif

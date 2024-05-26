@@ -13,6 +13,8 @@ struct ApiConstants {
 }
 
 struct AppString {
+    static let caAccount = "Credit Agricole"
+    static let otherAccount = "Autres Banques"
     static let invalidUrl = "Unable to perform the request"
     static let invalidResponse = "There is no valid data, please try again."
     static let requestFailed = "Sorry for the inconvinience, server is not reachable."
