@@ -10,7 +10,7 @@ import SwiftUI
 struct MyAccountsView: View {
     
     @StateObject var viewModel: MyAccountsViewModel
-
+    
     var body: some View {
         List {
             AccountSection(header: AppString.caAccount,
@@ -22,7 +22,7 @@ struct MyAccountsView: View {
                 viewModel.showAccountDetail(account: account)
             }
         }
-        .listStyle(.sidebar)
+        .listStyle(.insetGrouped)
         .task {
             await viewModel.fetchAccounts()
         }
@@ -31,12 +31,10 @@ struct MyAccountsView: View {
 
 // MARK: - Previews
 #Preview {
-    NavigationStack {
-        MyAccountsView(
-            viewModel: MyAccountsViewModel(
-                coordinator: Coordinator(),
-                accountsService: AccountsClient()
-            )
+    MyAccountsView(
+        viewModel: MyAccountsViewModel(
+            coordinator: Coordinator(),
+            accountsService: AccountsClient()
         )
-    }
+    )
 }

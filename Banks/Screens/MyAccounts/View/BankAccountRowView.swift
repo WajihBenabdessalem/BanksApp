@@ -1,5 +1,5 @@
 //
-//  BankRowView.swift
+//  BankAccountRowView.swift
 //  Banks
 //
 //  Created by Wajih Benabdessalem on 5/24/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct BankRowView: View {
+struct BankAccountRowView: View {
     
     let title: String
     let accounts: [Account]
@@ -21,7 +21,7 @@ struct BankRowView: View {
                         Button {
                             action(account)
                         } label: {
-                            BankItemView(title: account.label,
+                            AccountRowView(title: account.label,
                                          amount: account.accountBalance)
                         }
                     }
@@ -39,7 +39,7 @@ struct BankRowView: View {
 
 // MARK: - Previews
 #Preview {
-    BankRowView(title: MockData.account1.label, 
+    BankAccountRowView(title: MockData.account1.label,
                 accounts: MockData.accounts,
                 action: { account in })
         .padding(.horizontal)

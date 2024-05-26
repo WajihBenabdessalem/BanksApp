@@ -20,7 +20,8 @@ class MyAccountsViewModel: ObservableObject {
         self.coordinator = coordinator
         self.accountsService = accountsService
     }
-    
+     
+    /// Here we call the fetch accounts API, then we separate the `Credit Agricole` accounts from `Autres Banques` as well as sorted them alphabetically.
     @MainActor
     func fetchAccounts() async {
         do {

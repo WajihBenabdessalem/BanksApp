@@ -19,8 +19,8 @@
 		DB61A29C2BFFF7FE00E1010E /* Data+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2972BFFF7FE00E1010E /* Data+extension.swift */; };
 		DB61A2A02C00D3A700E1010E /* banks.json in Resources */ = {isa = PBXBuildFile; fileRef = DB61A29F2C00D3A600E1010E /* banks.json */; };
 		DB61A2A32C00D46C00E1010E /* MyAccountsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2A22C00D46C00E1010E /* MyAccountsViewModel.swift */; };
-		DB61A2A62C0103F300E1010E /* BankRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2A52C0103F300E1010E /* BankRowView.swift */; };
-		DB61A2A92C01045300E1010E /* BankItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2A82C01045300E1010E /* BankItemView.swift */; };
+		DB61A2A62C0103F300E1010E /* BankAccountRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2A52C0103F300E1010E /* BankAccountRowView.swift */; };
+		DB61A2A92C01045300E1010E /* AccountRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2A82C01045300E1010E /* AccountRowView.swift */; };
 		DB61A2AC2C012A8300E1010E /* AccountSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2AB2C012A8300E1010E /* AccountSection.swift */; };
 		DB61A2B02C0211F800E1010E /* AccountDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2AF2C0211F800E1010E /* AccountDetailView.swift */; };
 		DB61A2B42C02124800E1010E /* AccountDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2B32C02124800E1010E /* AccountDetailViewModel.swift */; };
@@ -68,8 +68,8 @@
 		DB61A2972BFFF7FE00E1010E /* Data+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+extension.swift"; sourceTree = "<group>"; };
 		DB61A29F2C00D3A600E1010E /* banks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = banks.json; sourceTree = "<group>"; };
 		DB61A2A22C00D46C00E1010E /* MyAccountsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountsViewModel.swift; sourceTree = "<group>"; };
-		DB61A2A52C0103F300E1010E /* BankRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankRowView.swift; sourceTree = "<group>"; };
-		DB61A2A82C01045300E1010E /* BankItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankItemView.swift; sourceTree = "<group>"; };
+		DB61A2A52C0103F300E1010E /* BankAccountRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankAccountRowView.swift; sourceTree = "<group>"; };
+		DB61A2A82C01045300E1010E /* AccountRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRowView.swift; sourceTree = "<group>"; };
 		DB61A2AB2C012A8300E1010E /* AccountSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSection.swift; sourceTree = "<group>"; };
 		DB61A2AF2C0211F800E1010E /* AccountDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetailView.swift; sourceTree = "<group>"; };
 		DB61A2B32C02124800E1010E /* AccountDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetailViewModel.swift; sourceTree = "<group>"; };
@@ -226,7 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				DB61A2792BFFE62000E1010E /* MyAccountsView.swift */,
-				DB61A2A52C0103F300E1010E /* BankRowView.swift */,
+				DB61A2A52C0103F300E1010E /* BankAccountRowView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -242,7 +242,7 @@
 		DB61A2AD2C012AF300E1010E /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
-				DB61A2A82C01045300E1010E /* BankItemView.swift */,
+				DB61A2A82C01045300E1010E /* AccountRowView.swift */,
 				DB61A2AB2C012A8300E1010E /* AccountSection.swift */,
 			);
 			path = UIComponents;
@@ -489,7 +489,7 @@
 				DB61A2A32C00D46C00E1010E /* MyAccountsViewModel.swift in Sources */,
 				DB61A2952BFFF5D100E1010E /* Constants.swift in Sources */,
 				DB8C4B712BFE7752008E3335 /* ContentView.swift in Sources */,
-				DB61A2A92C01045300E1010E /* BankItemView.swift in Sources */,
+				DB61A2A92C01045300E1010E /* AccountRowView.swift in Sources */,
 				DB8C4B6F2BFE7752008E3335 /* BanksApp.swift in Sources */,
 				DB61A2BD2C02917100E1010E /* Date+extension.swift in Sources */,
 				DB61A28F2BFFF4FD00E1010E /* EndPoint.swift in Sources */,
@@ -506,7 +506,7 @@
 				DB61A27C2BFFE64300E1010E /* SimulationView.swift in Sources */,
 				DB61A2B92C02224200E1010E /* String+extension.swift in Sources */,
 				DB61A2B02C0211F800E1010E /* AccountDetailView.swift in Sources */,
-				DB61A2A62C0103F300E1010E /* BankRowView.swift in Sources */,
+				DB61A2A62C0103F300E1010E /* BankAccountRowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

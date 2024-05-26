@@ -20,7 +20,7 @@ struct AccountSection: View {
              .padding(.leading,-16)
         ) {
             ForEach(accounts, id: \.name) { bank in
-                BankRowView(title: bank.name, 
+                BankAccountRowView(title: bank.name,
                             accounts: bank.accounts){ account in action(account)
                 }
             }
@@ -32,5 +32,6 @@ struct AccountSection: View {
 // MARK: - Previews
 #Preview {
     AccountSection(header: AppString.caAccount,
-                   accounts: [], action: {_ in})
+                   accounts: [],
+                   action: {_ in})
 }
