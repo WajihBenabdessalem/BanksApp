@@ -18,4 +18,8 @@ class Coordinator: ObservableObject {
     func goBack() {
         path.removeLast()
     }
+    
+    func popToRoot() {
+        path = NavigationPath()
+    }
 }
