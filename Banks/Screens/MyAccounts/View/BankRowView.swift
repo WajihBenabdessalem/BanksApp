@@ -22,7 +22,7 @@ struct BankRowView: View {
                             action(account)
                         } label: {
                             BankItemView(title: account.label,
-                                         price: account.accountBalance)
+                                         amount: account.accountBalance)
                         }
                     }
                 }
@@ -39,7 +39,7 @@ struct BankRowView: View {
 
 // MARK: - Previews
 #Preview {
-    BankRowView(title: "Account title", 
+    BankRowView(title: MockData.account1.label, 
                 accounts: MockData.accounts,
                 action: { account in })
         .padding(.horizontal)

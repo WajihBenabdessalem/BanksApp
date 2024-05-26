@@ -31,5 +31,6 @@ struct AccountSection: View {
 
 // MARK: - Previews
 #Preview {
-    AccountSection(header: "Credit Agricole", accounts: [], action: {_ in})
+    AccountSection(header: AppString.caAccount,
+                   accounts: [], action: {_ in})
 }

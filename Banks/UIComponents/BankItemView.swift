@@ -10,7 +10,7 @@ import SwiftUI
 struct BankItemView: View {
     
     let title: String
-    let price: String
+    let amount: String
     
     var body: some View {
         HStack(spacing: 0) {
@@ -19,7 +19,7 @@ struct BankItemView: View {
                 .foregroundStyle(.gray)
                 .padding(.leading)
             Spacer()
-            Text(price)
+            Text(amount)
                 .font(.headline)
                 .foregroundStyle(.gray.opacity(0.5))
                 .padding(.trailing)
@@ -31,5 +31,6 @@ struct BankItemView: View {
 }
 // MARK: - Previews
 #Preview {
-    BankItemView(title: "Account title", price: "12345.67 €")
+    BankItemView(title: MockData.operation1.title,
+                 amount: MockData.operation1.amount)
 }
