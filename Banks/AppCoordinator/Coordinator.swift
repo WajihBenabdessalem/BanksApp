@@ -56,13 +56,10 @@ class Coordinator: ObservableObject {
             AccountDetailView(viewModel: AccountDetailViewModel(account: account))
         case .accounts:
             MyAccountsView(viewModel: MyAccountsViewModel(accountsService: AccountsClient()))
-                .navigationTitle(AppString.myAccounts)
         case .simulation:
             SimulationView()
-                .navigationTitle(AppString.simulation)
         case .upToYou:
             UpToYouView()
-                .navigationTitle(AppString.upToYou)
         }
     }
 }
