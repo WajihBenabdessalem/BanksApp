@@ -16,15 +16,17 @@ struct ContentView: View {
             ForEach(Tab.allCases) { tab in
                 NavigationStack(path: $coordinator.path) {
                     switch tab {
-                    case .myAccounts:
+                    case .accounts:
                         coordinator.build(page: .accounts)
                             .navigationDestination(for: Page.self) { page in
                                 coordinator.build(page:page)
-                            }
+                            }.navigationTitle(tab.title)
                     case .simulation:
                         coordinator.build(page: .simulation)
+                            .navigationTitle(tab.title)
                     case .upToYou:
                         coordinator.build(page: .upToYou)
+                            .navigationTitle(tab.title)
                     }
                 }
                 .tabItem {
@@ -41,7 +43,7 @@ extension ContentView {
     /// over all possible cases and providing a unique identifier for each case.
     enum Tab: Int, CaseIterable, Identifiable, Hashable {
         /// Represents "Mes Comptes" screen
-        case myAccounts
+        case accounts
         /// Represents the "Simulation" screen
         case simulation
         /// Represents the " À vous de jouer" screen
@@ -52,7 +54,7 @@ extension ContentView {
         /// A computed property that returns the title associated with tab.
         var title: String {
             switch self {
-            case .myAccounts: return AppString.myAccounts
+            case .accounts: return AppString.myAccounts
             case .simulation: return AppString.simulation
             case .upToYou: return AppString.upToYou
             }
@@ -61,7 +63,7 @@ extension ContentView {
         /// These image name correspond to SF Symbols and can be used as icon for the tab.
         var systemImage: String {
             switch self {
-            case .myAccounts: return "star.fill"
+            case .accounts: return "star.fill"
             case .simulation: return "gear"
             case .upToYou: return "flag"
             }
