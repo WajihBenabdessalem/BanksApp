@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct BankAccountRowView: View {
-    
     let title: String
     let accounts: [Account]
     let action: (Account) -> Void
@@ -41,6 +40,7 @@ struct BankAccountRowView: View {
 #Preview {
     BankAccountRowView(title: MockData.account1.label,
                 accounts: MockData.accounts,
-                action: { account in })
+                       action: { _ in
+    })
         .padding(.horizontal)
 }

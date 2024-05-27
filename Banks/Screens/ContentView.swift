@@ -8,27 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
-    
-    @StateObject var coordinator = Coordinator()
+
+    @EnvironmentObject private var coordinator: Coordinator
     @State var selectedTabIndex: Int
-    
     var body: some View {
         TabView(selection: $selectedTabIndex) {
             ForEach(Tab.allCases) { tab in
                 NavigationStack(path: $coordinator.path) {
                     switch tab {
                     case .myAccounts:
-                        MyAccountsView(viewModel: MyAccountsViewModel(coordinator: coordinator, accountsService: AccountsClient()))
-                        .navigationTitle(tab.title)
-                        .navigationDestination(for: Account.self) { account in
-                            AccountDetailView(viewModel: AccountDetailViewModel(account: account))
-                        }
+                        coordinator.build(page: .accounts)
+                            .navigationDestination(for: Page.self) { page in
+                                coordinator.build(page:page)
+                            }
                     case .simulation:
-                        SimulationView()
-                            .navigationTitle(tab.title)
+                        coordinator.build(page: .simulation)
                     case .upToYou:
-                        UpToYouView()
-                            .navigationTitle(tab.title)
+                        coordinator.build(page: .upToYou)
                     }
                 }
                 .tabItem {
@@ -53,29 +49,21 @@ extension ContentView {
 
         /// The unique identifier for each case, derived from the rawValue of the enumeration.
         var id: Int { self.rawValue }
-        
         /// A computed property that returns the title associated with tab.
         var title: String {
             switch self {
-            case .myAccounts:
-                return "Mes Comptes"
-            case .simulation:
-                return "Simulation"
-            case .upToYou:
-                return "À vous de jouer"
+            case .myAccounts: return AppString.myAccounts
+            case .simulation: return AppString.simulation
+            case .upToYou: return AppString.upToYou
             }
         }
-        
         /// A computed property that returns the system image name associated with tab.
         /// These image name correspond to SF Symbols and can be used as icon for the tab.
         var systemImage: String {
             switch self {
-            case .myAccounts:
-                return "star.fill"
-            case .simulation:
-                return "gear"
-            case .upToYou:
-                return "flag"
+            case .myAccounts: return "star.fill"
+            case .simulation: return "gear"
+            case .upToYou: return "flag"
             }
         }
     }

@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct AccountDetailView: View {
-    
+
+    @EnvironmentObject private var coordinator: Coordinator
     @StateObject var viewModel: AccountDetailViewModel
-    
     var body: some View {
         VStack {
             VStack(spacing: 20) {
@@ -23,7 +23,7 @@ struct AccountDetailView: View {
             .frame(maxWidth: .infinity)
             .background(Color.gray.opacity(0.1))
             List {
-                ForEach(viewModel.operations, id:  \.id) { operation in
+                ForEach(viewModel.operations, id: \.id) { operation in
                     OperationRowView(operation: operation)
                 }
             }

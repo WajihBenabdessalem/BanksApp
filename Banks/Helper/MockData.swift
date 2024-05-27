@@ -14,7 +14,7 @@ struct MockData {
                                  id: "151515151151",
                                  label: "Compte de dépôt",
                                  operations: [
-                                    operation1,operation2
+                                    operation1, operation2
                                  ],
                                  order: 1,
                                  productCode: "00004",
@@ -25,7 +25,7 @@ struct MockData {
                                  id: "9892736780987654",
                                  label: "Compte joint",
                                  operations: [
-                                    operation1,operation2
+                                    operation1, operation2
                                  ],
                                  order: 2,
                                  productCode: "00007",

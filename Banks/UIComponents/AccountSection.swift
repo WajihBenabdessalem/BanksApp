@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct AccountSection: View {
-    
     let header: String
     let accounts: [Accounts]
     let action: (Account) -> Void
@@ -17,11 +16,14 @@ struct AccountSection: View {
         Section(header:
             Text(header)
              .foregroundStyle(.gray)
-             .padding(.leading,-16)
+             .padding(.leading, -16)
         ) {
             ForEach(accounts, id: \.name) { bank in
-                BankAccountRowView(title: bank.name,
-                            accounts: bank.accounts){ account in action(account)
+                BankAccountRowView(
+                    title: bank.name,
+                    accounts: bank.accounts
+                ) { account in
+                    action(account)
                 }
             }
         }

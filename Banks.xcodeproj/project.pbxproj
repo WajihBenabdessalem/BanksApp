@@ -28,7 +28,8 @@
 		DB61A2B92C02224200E1010E /* String+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2B82C02224200E1010E /* String+extension.swift */; };
 		DB61A2BB2C0231DA00E1010E /* OperationRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2BA2C0231DA00E1010E /* OperationRowView.swift */; };
 		DB61A2BD2C02917100E1010E /* Date+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2BC2C02917100E1010E /* Date+extension.swift */; };
-		DB61A2BF2C036B7500E1010E /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2BE2C036B7500E1010E /* Coordinator.swift */; };
+		DB67AB762C03EFF8003F06C8 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB67AB752C03EFF8003F06C8 /* Coordinator.swift */; };
+		DB67AB782C03F19B003F06C8 /* CoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB67AB772C03F19A003F06C8 /* CoordinatorView.swift */; };
 		DB8C4B6F2BFE7752008E3335 /* BanksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8C4B6E2BFE7752008E3335 /* BanksApp.swift */; };
 		DB8C4B712BFE7752008E3335 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8C4B702BFE7752008E3335 /* ContentView.swift */; };
 		DB8C4B732BFE7755008E3335 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB8C4B722BFE7755008E3335 /* Assets.xcassets */; };
@@ -77,7 +78,8 @@
 		DB61A2B82C02224200E1010E /* String+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+extension.swift"; sourceTree = "<group>"; };
 		DB61A2BA2C0231DA00E1010E /* OperationRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationRowView.swift; sourceTree = "<group>"; };
 		DB61A2BC2C02917100E1010E /* Date+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+extension.swift"; sourceTree = "<group>"; };
-		DB61A2BE2C036B7500E1010E /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		DB67AB752C03EFF8003F06C8 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		DB67AB772C03F19A003F06C8 /* CoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorView.swift; sourceTree = "<group>"; };
 		DB8C4B6B2BFE7752008E3335 /* Banks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Banks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB8C4B6E2BFE7752008E3335 /* BanksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanksApp.swift; sourceTree = "<group>"; };
 		DB8C4B702BFE7752008E3335 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -348,7 +350,8 @@
 		DBDE085E2C0395EC00DBC90F /* AppCoordinator */ = {
 			isa = PBXGroup;
 			children = (
-				DB61A2BE2C036B7500E1010E /* Coordinator.swift */,
+				DB67AB752C03EFF8003F06C8 /* Coordinator.swift */,
+				DB67AB772C03F19A003F06C8 /* CoordinatorView.swift */,
 			);
 			path = AppCoordinator;
 			sourceTree = "<group>";
@@ -367,8 +370,11 @@
 			buildRules = (
 			);
 			dependencies = (
+				DBDE08652C03BB0B00DBC90F /* PBXTargetDependency */,
 			);
 			name = Banks;
+			packageProductDependencies = (
+			);
 			productName = Banks;
 			productReference = DB8C4B6B2BFE7752008E3335 /* Banks.app */;
 			productType = "com.apple.product-type.application";
@@ -441,6 +447,9 @@
 				Base,
 			);
 			mainGroup = DB8C4B622BFE7751008E3335;
+			packageReferences = (
+				DB67AB742C03E7AA003F06C8 /* XCRemoteSwiftPackageReference "SwiftLint" */,
+			);
 			productRefGroup = DB8C4B6C2BFE7752008E3335 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -494,6 +503,8 @@
 				DB61A2BD2C02917100E1010E /* Date+extension.swift in Sources */,
 				DB61A28F2BFFF4FD00E1010E /* EndPoint.swift in Sources */,
 				DB61A2BB2C0231DA00E1010E /* OperationRowView.swift in Sources */,
+				DB67AB762C03EFF8003F06C8 /* Coordinator.swift in Sources */,
+				DB67AB782C03F19B003F06C8 /* CoordinatorView.swift in Sources */,
 				DB61A2B62C02141700E1010E /* MockData.swift in Sources */,
 				DB61A28E2BFFF4FD00E1010E /* AccountsClient.swift in Sources */,
 				DB61A2B42C02124800E1010E /* AccountDetailViewModel.swift in Sources */,
@@ -501,7 +512,6 @@
 				DB61A29C2BFFF7FE00E1010E /* Data+extension.swift in Sources */,
 				DB61A27A2BFFE62000E1010E /* MyAccountsView.swift in Sources */,
 				DB61A2902BFFF4FD00E1010E /* AccountsEndPoint.swift in Sources */,
-				DB61A2BF2C036B7500E1010E /* Coordinator.swift in Sources */,
 				DB61A2862BFFEE8800E1010E /* BanksResponse.swift in Sources */,
 				DB61A27C2BFFE64300E1010E /* SimulationView.swift in Sources */,
 				DB61A2B92C02224200E1010E /* String+extension.swift in Sources */,
@@ -539,6 +549,10 @@
 			isa = PBXTargetDependency;
 			target = DB8C4B6A2BFE7752008E3335 /* Banks */;
 			targetProxy = DB8C4B862BFE7756008E3335 /* PBXContainerItemProxy */;
+		};
+		DBDE08652C03BB0B00DBC90F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = DBDE08642C03BB0B00DBC90F /* SwiftLintBuildToolPlugin */;
 		};
 /* End PBXTargetDependency section */
 
@@ -844,6 +858,33 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DB67AB742C03E7AA003F06C8 /* XCRemoteSwiftPackageReference "SwiftLint" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/SwiftLint";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.55.1;
+			};
+		};
+		DBDE085F2C03BAC400DBC90F /* XCRemoteSwiftPackageReference "SwiftLint" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/SwiftLint";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.55.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DBDE08642C03BB0B00DBC90F /* SwiftLintBuildToolPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DBDE085F2C03BAC400DBC90F /* XCRemoteSwiftPackageReference "SwiftLint" */;
+			productName = "plugin:SwiftLintBuildToolPlugin";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DB8C4B632BFE7751008E3335 /* Project object */;
 }

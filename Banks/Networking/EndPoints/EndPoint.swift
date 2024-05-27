@@ -31,13 +31,13 @@ extension Endpoint {
     }
     var headers: [String: String] {
         return [
-            "Content-Type":ApiConstants.contentType,
+            "Content-Type": ApiConstants.contentType
          ]
     }
     var urlRequest: URLRequest {
-        var components = URLComponents(url: baseURL.appendingPathComponent(path), resolvingAgainstBaseURL: true)!
-        components.queryItems = queryItems
-        var request = URLRequest(url: components.url!)
+        var urlComp = URLComponents(url: baseURL.appendingPathComponent(path), resolvingAgainstBaseURL: true)!
+        urlComp.queryItems = queryItems
+        var request = URLRequest(url: urlComp.url!)
         request.httpMethod = method.rawValue
         request.allHTTPHeaderFields = headers
         return request

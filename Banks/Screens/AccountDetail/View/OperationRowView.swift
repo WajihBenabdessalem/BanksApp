@@ -8,9 +8,8 @@
 import SwiftUI
 
 struct OperationRowView: View {
-    
     let operation: Operation
-    
+
     var body: some View {
         HStack {
             VStack(alignment: .leading, spacing: 10) {

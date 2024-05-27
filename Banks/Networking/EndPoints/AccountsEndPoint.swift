@@ -12,7 +12,6 @@ enum AccountsEndPoint {
 }
 
 extension AccountsEndPoint: Endpoint {
-    
     var path: String {
         switch self {
         case .myAccounts:

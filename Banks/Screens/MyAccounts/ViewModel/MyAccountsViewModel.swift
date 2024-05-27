@@ -8,20 +8,16 @@
 import Foundation
 
 class MyAccountsViewModel: ObservableObject {
-    
+    /// Published variables property wrappers.
     @Published var caAccounts: [Accounts] = []
     @Published var otherAccounts: [Accounts] = []
-    private var coordinator: Coordinator
-    
     let accountsService: AccountsService
-    
-    init(coordinator: Coordinator,
-         accountsService: AccountsService) {
-        self.coordinator = coordinator
+    init(accountsService: AccountsService) {
         self.accountsService = accountsService
     }
-     
-    /// Here we call the fetch accounts API, then we separate the `Credit Agricole` accounts from `Autres Banques` as well as sorted them alphabetically.
+    /// Here we call the fetch accounts API,
+    /// then we separate the `Credit Agricole` accounts from `Autres Banques`,
+    /// as well as sorted them alphabetically.
     @MainActor
     func fetchAccounts() async {
         do {
@@ -32,12 +28,8 @@ class MyAccountsViewModel: ObservableObject {
             otherAccounts = fetchedAccounts
                 .filter({ bank in bank.isCA == 0 })
                 .sorted { $0.name.lowercased() < $1.name.lowercased() }
-        } catch  {
+        } catch {
             print(error.localizedDescription)
         }
-    }
-    
-    func showAccountDetail(account: Account) {
-        coordinator.showAccountDetail(account: account)
     }
 }

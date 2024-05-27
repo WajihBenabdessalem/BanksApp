@@ -8,10 +8,8 @@
 import SwiftUI
 
 struct AccountRowView: View {
-    
     let title: String
     let amount: String
-    
     var body: some View {
         HStack(spacing: 0) {
             Text(title)

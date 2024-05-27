@@ -8,18 +8,21 @@
 import SwiftUI
 
 struct MyAccountsView: View {
-    
+    @EnvironmentObject private var coordinator: Coordinator
     @StateObject var viewModel: MyAccountsViewModel
-    
     var body: some View {
         List {
-            AccountSection(header: AppString.caAccount,
-                           accounts: viewModel.caAccounts){ account in
-                viewModel.showAccountDetail(account: account)
+            AccountSection(
+                header: AppString.caAccount,
+                accounts: viewModel.caAccounts
+            ) { account in
+                coordinator.push(.detail(account))
             }
-            AccountSection(header: AppString.otherAccount,
-                           accounts: viewModel.otherAccounts){ account in
-                viewModel.showAccountDetail(account: account)
+            AccountSection(
+                header: AppString.otherAccount,
+                accounts: viewModel.otherAccounts
+            ) { account in
+                coordinator.push(.detail(account))
             }
         }
         .listStyle(.insetGrouped)
@@ -33,7 +36,6 @@ struct MyAccountsView: View {
 #Preview {
     MyAccountsView(
         viewModel: MyAccountsViewModel(
-            coordinator: Coordinator(),
             accountsService: AccountsClient()
         )
     )
