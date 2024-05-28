@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+// MARK: - Page.
+
 enum Page: Hashable {
     case root
     case accounts
@@ -14,6 +16,8 @@ enum Page: Hashable {
     case simulation
     case upToYou
 }
+
+// MARK: - Sheet.
 
 enum Sheet: String, Identifiable {
     case pickerView
@@ -23,6 +27,8 @@ enum Sheet: String, Identifiable {
     }
 }
 
+// MARK: - FullScreenCover.
+
 enum FullScreenCover: String, Identifiable {
     case operationView
 
@@ -31,31 +37,34 @@ enum FullScreenCover: String, Identifiable {
     }
 }
 
+// MARK: - Coordinator.
+
 class Coordinator: ObservableObject {
 
+    ///  Pullished variable property wrapper.
     @Published var path = NavigationPath()
-
+    ///  Method to push the view to the child view.
     func push(_ page: Page) {
         path.append(page)
     }
-
+    ///  Method to pop the child view to the parent view.
     func pop() {
         path.removeLast()
     }
-
+    ///  Method to pop the view to the root view..
     func popToRoot() {
         path.removeLast(path.count)
     }
-
+    /// Build the view according to the enum `Page`
     @ViewBuilder
     func build(page: Page) -> some View {
         switch page {
         case .root:
-            ContentView( selectedTabIndex: 0)
+            ContentView()
         case let .detail(account):
             AccountDetailView(viewModel: AccountDetailViewModel(account: account))
         case .accounts:
-            MyAccountsView(viewModel: MyAccountsViewModel(accountsService: AccountsClient()))
+            MyAccountsView(viewModel: MyAccountsViewModel())
         case .simulation:
             SimulationView()
         case .upToYou:
