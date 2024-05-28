@@ -6,29 +6,44 @@
 //
 
 import XCTest
+@testable import Banks
 
 final class APIClientTests: XCTestCase {
 
+    var mockApiClient: MockApiClient!
+    
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        mockApiClient = MockApiClient()
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        mockApiClient = nil
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    func testRequestSuccess() async throws {
+        // Given
+        let expectedData = AccountsResponse()
+        let data = try! JSONEncoder().encode(expectedData)
+        mockApiClient.result = .success(data)
+
+        // When
+        let result: AccountsResponse = try await mockApiClient.request(endPoint: MockEndPoint.validURL)
+
+        // Then
+        XCTAssertEqual(result, expectedData)
     }
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func testRequestFailure() async throws {
+        // Given
+        let expectedError = ApiError.invalidURL
+        mockApiClient.result = .failure(expectedError)
+
+        // When & Then
+        do {
+            let _: AccountsResponse = try await mockApiClient.request(endPoint: MockEndPoint.invalidURL)
+            XCTFail("Expected error to be thrown")
+        } catch {
+            XCTAssertEqual(error as! ApiError, expectedError)
         }
     }
 

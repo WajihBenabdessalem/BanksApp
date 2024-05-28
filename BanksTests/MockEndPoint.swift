@@ -7,21 +7,12 @@
 
 import Foundation
 
-protocol MockEndPointProtocol {
-    var baseURL: URL { get }
-    var path: String { get }
-    var method: HTTPMethod { get }
-    var headers: [String: String] { get }
-    var queryItems: [URLQueryItem] { get }
-    var urlRequest: URLRequest { get }
-}
-
 enum MockEndPoint {
     case validURL
     case invalidURL
 }
 
-extension MockEndPoint: MockEndPointProtocol {
+extension MockEndPoint: EndPoint {
     var baseURL: URL {
         switch self {
         case .validURL:
