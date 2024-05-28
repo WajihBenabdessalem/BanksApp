@@ -7,11 +7,6 @@
 
 import Foundation
 
-struct ApiConstants {
-    static let baseURL = "https://cdf-test-mobile-default-rtdb.europe-west1.firebasedatabase.app"
-    static let contentType = "application/json"
-}
-
 struct AppString {
     static let caAccount = "Credit Agricole"
     static let otherAccount = "Autres Banques"

@@ -11,11 +11,11 @@ extension Data {
     /// Convert the Data to a JSON string format.
     ///
     /// - Returns: String presenting the json data.
-    var prettyJson: String? {
+    public var prettyJson: String? {
         guard let object = try? JSONSerialization.jsonObject(with: self, options: []),
               let data = try? JSONSerialization
-                             .data(withJSONObject: object, options: [.prettyPrinted]),
-              let prettyPrintedString = String(data: data, encoding: .utf8) else { return nil }
-        return prettyPrintedString
+                             .data(withJSONObject: object, options: [.prettyPrinted])
+               else { return nil }
+        return String(decoding: data, as: UTF8.self)
     }
 }

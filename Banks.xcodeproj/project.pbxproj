@@ -30,13 +30,20 @@
 		DB61A2BD2C02917100E1010E /* Date+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2BC2C02917100E1010E /* Date+extension.swift */; };
 		DB67AB762C03EFF8003F06C8 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB67AB752C03EFF8003F06C8 /* Coordinator.swift */; };
 		DB67AB782C03F19B003F06C8 /* CoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB67AB772C03F19A003F06C8 /* CoordinatorView.swift */; };
+		DB67AB7E2C0499E4003F06C8 /* ApiConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB67AB7D2C0499E4003F06C8 /* ApiConfig.swift */; };
+		DB7239C52C0628FA0014A6BE /* APIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7239C42C0628FA0014A6BE /* APIClientTests.swift */; };
+		DB7239C62C062A3E0014A6BE /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2872BFFF4FC00E1010E /* ApiClient.swift */; };
 		DB8C4B6F2BFE7752008E3335 /* BanksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8C4B6E2BFE7752008E3335 /* BanksApp.swift */; };
 		DB8C4B712BFE7752008E3335 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8C4B702BFE7752008E3335 /* ContentView.swift */; };
 		DB8C4B732BFE7755008E3335 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB8C4B722BFE7755008E3335 /* Assets.xcassets */; };
 		DB8C4B762BFE7755008E3335 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB8C4B752BFE7755008E3335 /* Preview Assets.xcassets */; };
-		DB8C4B802BFE7756008E3335 /* BanksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8C4B7F2BFE7756008E3335 /* BanksTests.swift */; };
 		DB8C4B8A2BFE7756008E3335 /* BanksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8C4B892BFE7756008E3335 /* BanksUITests.swift */; };
 		DB8C4B8C2BFE7756008E3335 /* BanksUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8C4B8B2BFE7756008E3335 /* BanksUITestsLaunchTests.swift */; };
+		DB9D90392C0639B90003AC80 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2932BFFF5D100E1010E /* Constants.swift */; };
+		DB9D903B2C063A580003AC80 /* MockApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9D903A2C063A580003AC80 /* MockApiClient.swift */; };
+		DBA143252C05EE3700784A47 /* MockEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB67AB7F2C04AF3B003F06C8 /* MockEndPoint.swift */; };
+		DBD6FC442C060043008079E7 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A28A2BFFF4FD00E1010E /* EndPoint.swift */; };
+		DBD6FC462C060059008079E7 /* ApiConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB67AB7D2C0499E4003F06C8 /* ApiConfig.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,16 +87,19 @@
 		DB61A2BC2C02917100E1010E /* Date+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+extension.swift"; sourceTree = "<group>"; };
 		DB67AB752C03EFF8003F06C8 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		DB67AB772C03F19A003F06C8 /* CoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorView.swift; sourceTree = "<group>"; };
+		DB67AB7D2C0499E4003F06C8 /* ApiConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConfig.swift; sourceTree = "<group>"; };
+		DB67AB7F2C04AF3B003F06C8 /* MockEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockEndPoint.swift; sourceTree = "<group>"; };
+		DB7239C42C0628FA0014A6BE /* APIClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientTests.swift; sourceTree = "<group>"; };
 		DB8C4B6B2BFE7752008E3335 /* Banks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Banks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB8C4B6E2BFE7752008E3335 /* BanksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanksApp.swift; sourceTree = "<group>"; };
 		DB8C4B702BFE7752008E3335 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DB8C4B722BFE7755008E3335 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB8C4B752BFE7755008E3335 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DB8C4B7B2BFE7756008E3335 /* BanksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BanksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB8C4B7F2BFE7756008E3335 /* BanksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanksTests.swift; sourceTree = "<group>"; };
 		DB8C4B852BFE7756008E3335 /* BanksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BanksUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB8C4B892BFE7756008E3335 /* BanksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanksUITests.swift; sourceTree = "<group>"; };
 		DB8C4B8B2BFE7756008E3335 /* BanksUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanksUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DB9D903A2C063A580003AC80 /* MockApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockApiClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +175,7 @@
 		DB61A2832BFFE9DF00E1010E /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				DB67AB7D2C0499E4003F06C8 /* ApiConfig.swift */,
 				DB61A2892BFFF4FC00E1010E /* ApiClients */,
 				DB61A28C2BFFF4FD00E1010E /* EndPoints */,
 			);
@@ -291,6 +302,7 @@
 				DB8C4B7E2BFE7756008E3335 /* BanksTests */,
 				DB8C4B882BFE7756008E3335 /* BanksUITests */,
 				DB8C4B6C2BFE7752008E3335 /* Products */,
+				DBA143202C05ED1F00784A47 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -333,7 +345,9 @@
 		DB8C4B7E2BFE7756008E3335 /* BanksTests */ = {
 			isa = PBXGroup;
 			children = (
-				DB8C4B7F2BFE7756008E3335 /* BanksTests.swift */,
+				DB67AB7F2C04AF3B003F06C8 /* MockEndPoint.swift */,
+				DB9D903A2C063A580003AC80 /* MockApiClient.swift */,
+				DB7239C42C0628FA0014A6BE /* APIClientTests.swift */,
 			);
 			path = BanksTests;
 			sourceTree = "<group>";
@@ -345,6 +359,13 @@
 				DB8C4B8B2BFE7756008E3335 /* BanksUITestsLaunchTests.swift */,
 			);
 			path = BanksUITests;
+			sourceTree = "<group>";
+		};
+		DBA143202C05ED1F00784A47 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		DBDE085E2C0395EC00DBC90F /* AppCoordinator */ = {
@@ -370,6 +391,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				DB25E8982C05F77F005B2652 /* PBXTargetDependency */,
+				DB25E89A2C05F77F005B2652 /* PBXTargetDependency */,
 				DBDE08652C03BB0B00DBC90F /* PBXTargetDependency */,
 			);
 			name = Banks;
@@ -393,6 +416,8 @@
 				DB8C4B7D2BFE7756008E3335 /* PBXTargetDependency */,
 			);
 			name = BanksTests;
+			packageProductDependencies = (
+			);
 			productName = BanksTests;
 			productReference = DB8C4B7B2BFE7756008E3335 /* BanksTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -448,7 +473,6 @@
 			);
 			mainGroup = DB8C4B622BFE7751008E3335;
 			packageReferences = (
-				DB67AB742C03E7AA003F06C8 /* XCRemoteSwiftPackageReference "SwiftLint" */,
 			);
 			productRefGroup = DB8C4B6C2BFE7752008E3335 /* Products */;
 			projectDirPath = "";
@@ -508,6 +532,7 @@
 				DB61A2B62C02141700E1010E /* MockData.swift in Sources */,
 				DB61A28E2BFFF4FD00E1010E /* AccountsClient.swift in Sources */,
 				DB61A2B42C02124800E1010E /* AccountDetailViewModel.swift in Sources */,
+				DB67AB7E2C0499E4003F06C8 /* ApiConfig.swift in Sources */,
 				DB61A27E2BFFE65800E1010E /* UpToYouView.swift in Sources */,
 				DB61A29C2BFFF7FE00E1010E /* Data+extension.swift in Sources */,
 				DB61A27A2BFFE62000E1010E /* MyAccountsView.swift in Sources */,
@@ -524,7 +549,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB8C4B802BFE7756008E3335 /* BanksTests.swift in Sources */,
+				DBA143252C05EE3700784A47 /* MockEndPoint.swift in Sources */,
+				DBD6FC442C060043008079E7 /* EndPoint.swift in Sources */,
+				DB9D903B2C063A580003AC80 /* MockApiClient.swift in Sources */,
+				DB7239C62C062A3E0014A6BE /* ApiClient.swift in Sources */,
+				DB7239C52C0628FA0014A6BE /* APIClientTests.swift in Sources */,
+				DBD6FC462C060059008079E7 /* ApiConfig.swift in Sources */,
+				DB9D90392C0639B90003AC80 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -540,6 +571,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		DB25E8982C05F77F005B2652 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = DB25E8972C05F77F005B2652 /* LintError */;
+		};
+		DB25E89A2C05F77F005B2652 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = DB25E8992C05F77F005B2652 /* LintWarning */;
+		};
 		DB8C4B7D2BFE7756008E3335 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = DB8C4B6A2BFE7752008E3335 /* Banks */;
@@ -755,6 +794,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = benabdessalemwajih.dev.BanksTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -775,6 +818,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = benabdessalemwajih.dev.BanksTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -860,12 +907,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		DB67AB742C03E7AA003F06C8 /* XCRemoteSwiftPackageReference "SwiftLint" */ = {
+		DB25E88D2C05F3D8005B2652 /* XCRemoteSwiftPackageReference "Quick" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/realm/SwiftLint";
+			repositoryURL = "https://github.com/Quick/Quick.git";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.55.1;
+				branch = main;
+				kind = branch;
 			};
 		};
 		DBDE085F2C03BAC400DBC90F /* XCRemoteSwiftPackageReference "SwiftLint" */ = {
@@ -879,6 +926,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		DB25E8972C05F77F005B2652 /* LintError */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DB25E88D2C05F3D8005B2652 /* XCRemoteSwiftPackageReference "Quick" */;
+			productName = "plugin:LintError";
+		};
+		DB25E8992C05F77F005B2652 /* LintWarning */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DB25E88D2C05F3D8005B2652 /* XCRemoteSwiftPackageReference "Quick" */;
+			productName = "plugin:LintWarning";
+		};
 		DBDE08642C03BB0B00DBC90F /* SwiftLintBuildToolPlugin */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = DBDE085F2C03BAC400DBC90F /* XCRemoteSwiftPackageReference "SwiftLint" */;
