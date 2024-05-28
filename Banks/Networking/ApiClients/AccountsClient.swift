@@ -14,7 +14,7 @@ protocol AccountsService {
 class AccountsClient: AccountsService {
     func fetchAccounts() async throws -> AccountsResponse {
         let accounts: AccountsResponse = try await ApiClient.shared.request(
-            endPoint: AccountsEndPoint.myAccounts
+            endPoint: AccountsEndPoint.accounts
         )
         return accounts
     }

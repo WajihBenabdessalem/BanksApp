@@ -15,7 +15,7 @@ enum HTTPMethod: String {
     case delete = "DELETE"
 }
 
-protocol Endpoint {
+protocol EndPoint {
     var baseURL: URL { get }
     var path: String { get }
     var method: HTTPMethod { get }
@@ -24,14 +24,14 @@ protocol Endpoint {
     var urlRequest: URLRequest { get }
 }
 
-extension Endpoint {
+extension EndPoint {
 
     var baseURL: URL {
-        return URL(string: ApiConstants.baseURL)!
+        return URL(string: ApiConfig.baseURL)!
     }
     var headers: [String: String] {
         return [
-            "Content-Type": ApiConstants.contentType
+            "Content-Type": ApiConfig.contentType
          ]
     }
     var urlRequest: URLRequest {

@@ -1,14 +1,13 @@
 //
-//  BanksTests.swift
+//  APIClientTests.swift
 //  BanksTests
 //
-//  Created by Wajih Benabdessalem on 5/22/24.
+//  Created by Wajih Benabdessalem on 5/28/24.
 //
 
 import XCTest
-@testable import Banks
 
-final class BanksTests: XCTestCase {
+final class APIClientTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

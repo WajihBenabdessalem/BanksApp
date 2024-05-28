@@ -8,25 +8,25 @@
 import Foundation
 
 enum AccountsEndPoint {
-    case myAccounts
+    case accounts
 }
 
-extension AccountsEndPoint: Endpoint {
+extension AccountsEndPoint: EndPoint {
     var path: String {
         switch self {
-        case .myAccounts:
+        case .accounts:
             "/banks.json"
         }
     }
     var method: HTTPMethod {
         switch self {
-        case .myAccounts:
+        case .accounts:
             .get
         }
     }
     var queryItems: [URLQueryItem] {
         switch self {
-        case .myAccounts:
+        case .accounts:
             []
         }
     }
