@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
 
     @EnvironmentObject private var coordinator: Coordinator
-    @State var selectedTabIndex: Int
+    @State var selectedTabIndex: Int = 0
     var body: some View {
         TabView(selection: $selectedTabIndex) {
             ForEach(Tab.allCases) { tab in

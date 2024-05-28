@@ -12,7 +12,7 @@ class MyAccountsViewModel: ObservableObject {
     @Published var caAccounts: [Accounts] = []
     @Published var otherAccounts: [Accounts] = []
     let accountsService: AccountsService
-    init(accountsService: AccountsService) {
+    init(accountsService: AccountsService = AccountsClient()) {
         self.accountsService = accountsService
     }
     /// Here we call the fetch accounts API,
