@@ -16,8 +16,10 @@ struct AccountDetailView: View {
             VStack(spacing: 20) {
                 Text(viewModel.account.accountBalance)
                     .font(.largeTitle)
+                    .accessibilityIdentifier("accountBalance")
                 Text(viewModel.account.label)
                     .font(.title3)
+                    .accessibilityIdentifier("accountLabel")
             }
             .padding()
             .frame(maxWidth: .infinity)
@@ -25,15 +27,18 @@ struct AccountDetailView: View {
             List {
                 ForEach(viewModel.operations, id: \.id) { operation in
                     OperationRowView(operation: operation)
+                        .accessibilityIdentifier("operationRow_\(operation.id)")
                 }
             }
+            .id(UUID())
             .listStyle(.plain)
+            .accessibilityIdentifier("operationsList")
         }
         .navigationBarTitleDisplayMode(.inline)
     }
 }
 
-// MARK: - Previews
+//// MARK: - Previews
 #Preview {
     NavigationStack {
         AccountDetailView(viewModel: AccountDetailViewModel(account: MockData.account1))

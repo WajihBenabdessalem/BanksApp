@@ -23,6 +23,7 @@ struct BankAccountRowView: View {
                             AccountRowView(title: account.label,
                                          amount: account.accountBalance)
                         }
+                        .accessibilityIdentifier("accountRow")
                     }
                 }
                 .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
