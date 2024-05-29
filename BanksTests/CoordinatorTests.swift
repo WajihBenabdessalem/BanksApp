@@ -6,30 +6,84 @@
 //
 
 import XCTest
+import SwiftUI
+import Combine
+
+@testable import Banks
 
 final class CoordinatorTests: XCTestCase {
+    var coordinator: Coordinator!
+    var cancellables: Set<AnyCancellable>!
+
+    let account = MockData.account1
 
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        coordinator = Coordinator()
+        cancellables = []
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        coordinator = nil
+        cancellables = nil
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    func testPush() {
+        // Given
+        let expectation = XCTestExpectation(description: "Coordinator pushes a new page")
+
+        // When
+        coordinator.push(.detail(account))
+
+        // Then
+        coordinator.$currentPage
+            .sink { [self] currentPage in
+                if currentPage == .detail(account) {
+                    expectation.fulfill()
+                }
+            }
+            .store(in: &cancellables)
+
+        wait(for: [expectation], timeout: 1.0)
     }
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
+    func testPop() {
+        // Given
+        coordinator.push(.detail(account))
+        let expectation = XCTestExpectation(description: "Coordinator pops to previous view")
 
+        // When
+        coordinator.pop()
+
+        // Then
+        coordinator.$path
+            .sink { path in
+                if path.isEmpty {
+                    expectation.fulfill()
+                }
+            }
+            .store(in: &cancellables)
+
+        wait(for: [expectation], timeout: 1.0)
+    }
+    
+    func testPopToRoot() {
+        // Given
+        coordinator.push(.detail(account))
+        coordinator.push(.accounts)
+        let expectation = XCTestExpectation(description: "Coordinator pops to root")
+
+        // When
+        coordinator.popToRoot()
+
+        // Then
+        coordinator.$path
+            .sink { path in
+                if path.isEmpty {
+                    expectation.fulfill()
+                }
+            }
+            .store(in: &cancellables)
+
+        wait(for: [expectation], timeout: 1.0)
+    }
 }
