@@ -17,43 +17,27 @@ enum Page: Hashable {
     case upToYou
 }
 
-// MARK: - Sheet.
-
-enum Sheet: String, Identifiable {
-    case pickerView
-
-    var id: String {
-        self.rawValue
-    }
-}
-
-// MARK: - FullScreenCover.
-
-enum FullScreenCover: String, Identifiable {
-    case operationView
-
-    var id: String {
-        self.rawValue
-    }
-}
-
 // MARK: - Coordinator.
 
 class Coordinator: ObservableObject {
 
     ///  Pullished variable property wrapper.
     @Published var path = NavigationPath()
+    @Published var currentPage: Page = .root
     ///  Method to push the view to the child view.
     func push(_ page: Page) {
         path.append(page)
+        currentPage = page
     }
     ///  Method to pop the child view to the parent view.
     func pop() {
         path.removeLast()
     }
+    
     ///  Method to pop the view to the root view..
     func popToRoot() {
         path.removeLast(path.count)
+        currentPage = .root
     }
     /// Build the view according to the enum `Page`
     @ViewBuilder
