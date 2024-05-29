@@ -1,5 +1,5 @@
 //
-//  BankItemView.swift
+//  AccountRowView.swift
 //  Banks
 //
 //  Created by Wajih Benabdessalem on 5/24/24.
@@ -7,11 +7,9 @@
 
 import SwiftUI
 
-struct BankItemView: View {
-    
+struct AccountRowView: View {
     let title: String
-    let price: String
-    
+    let amount: String
     var body: some View {
         HStack(spacing: 0) {
             Text(title)
@@ -19,7 +17,7 @@ struct BankItemView: View {
                 .foregroundStyle(.gray)
                 .padding(.leading)
             Spacer()
-            Text(price)
+            Text(amount)
                 .font(.headline)
                 .foregroundStyle(.gray.opacity(0.5))
                 .padding(.trailing)
@@ -30,8 +28,7 @@ struct BankItemView: View {
     }
 }
 // MARK: - Previews
-#if DEBUG
 #Preview {
-    BankItemView(title: "Account title", price: "12345.67 €")
+    AccountRowView(title: MockData.operation1.title,
+                 amount: MockData.operation1.amount)
 }
-#endif

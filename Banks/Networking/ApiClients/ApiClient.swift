@@ -15,22 +15,21 @@ protocol ApiService {
     ///   - endPoint: Endpoint of type
     ///   - urlSession:  configured Session is an optional
     /// - Returns: returns the decodable of type model
-    func request<T: Decodable>(endPoint: Endpoint) async throws -> T
+    func request<T: Decodable>(endPoint: EndPoint) async throws -> T
 }
 
 // MARK: - ApiClient.
-struct ApiClient: ApiService {
+public struct ApiClient: ApiService {
     /// Static property for singleton instance.
     static let shared = ApiClient()
-    
+    /// Initialisation.
     private init() { }
     /// Default implementation for the request method within the WebService protocol.
-    func request<T: Decodable>(endPoint: Endpoint) async throws -> T {
+    func request<T: Decodable>(endPoint: EndPoint) async throws -> T {
         /// preparing a URLRequest for the provided URL.
         let request = endPoint.urlRequest
         print("Sending request to \(request.url?.absoluteString ?? "")")
         let result: (data: Data?, response: URLResponse) = try await URLSession.shared.data(for: request)
-        
         print("Received response from \(request.url?.absoluteString ?? "")")
         /// Ensuring the response is an HTTPURLResponse and the status code is in the success range.
         guard let response = result.response as? HTTPURLResponse else {

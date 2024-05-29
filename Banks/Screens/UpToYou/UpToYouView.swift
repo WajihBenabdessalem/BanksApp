@@ -8,14 +8,15 @@
 import SwiftUI
 
 struct UpToYouView: View {
+
+    @EnvironmentObject private var coordinator: Coordinator
+
     var body: some View {
         Text("Empty View")
     }
 }
 
 // MARK: - Previews
-#if DEBUG
 #Preview {
     UpToYouView()
 }
-#endif

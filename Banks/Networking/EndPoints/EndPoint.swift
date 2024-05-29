@@ -15,7 +15,7 @@ enum HTTPMethod: String {
     case delete = "DELETE"
 }
 
-protocol Endpoint {
+protocol EndPoint {
     var baseURL: URL { get }
     var path: String { get }
     var method: HTTPMethod { get }
@@ -24,20 +24,20 @@ protocol Endpoint {
     var urlRequest: URLRequest { get }
 }
 
-extension Endpoint {
+extension EndPoint {
 
     var baseURL: URL {
-        return URL(string: ApiConstants.baseURL)!
+        return URL(string: ApiConfig.baseURL)!
     }
     var headers: [String: String] {
         return [
-            "Content-Type":ApiConstants.contentType,
+            "Content-Type": ApiConfig.contentType
          ]
     }
     var urlRequest: URLRequest {
-        var components = URLComponents(url: baseURL.appendingPathComponent(path), resolvingAgainstBaseURL: true)!
-        components.queryItems = queryItems
-        var request = URLRequest(url: components.url!)
+        var urlComp = URLComponents(url: baseURL.appendingPathComponent(path), resolvingAgainstBaseURL: true)!
+        urlComp.queryItems = queryItems
+        var request = URLRequest(url: urlComp.url!)
         request.httpMethod = method.rawValue
         request.allHTTPHeaderFields = headers
         return request

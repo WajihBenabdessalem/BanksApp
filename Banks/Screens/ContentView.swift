@@ -8,22 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
-    
-    @State var selectedTabIndex: Int
-    
+
+    @EnvironmentObject private var coordinator: Coordinator
+    @State var selectedTabIndex: Int = 0
     var body: some View {
         TabView(selection: $selectedTabIndex) {
             ForEach(Tab.allCases) { tab in
-                NavigationStack {
+                NavigationStack(path: $coordinator.path) {
                     switch tab {
-                    case .myAccounts:
-                        MyAccountsView()
-                            .navigationTitle(tab.title)
+                    case .accounts:
+                        coordinator.build(page: .accounts)
+                            .navigationDestination(for: Page.self) { page in
+                                coordinator.build(page:page)
+                            }.navigationTitle(tab.title)
                     case .simulation:
-                        SimulationView()
+                        coordinator.build(page: .simulation)
                             .navigationTitle(tab.title)
                     case .upToYou:
-                        UpToYouView()
+                        coordinator.build(page: .upToYou)
                             .navigationTitle(tab.title)
                     }
                 }
@@ -41,7 +43,7 @@ extension ContentView {
     /// over all possible cases and providing a unique identifier for each case.
     enum Tab: Int, CaseIterable, Identifiable, Hashable {
         /// Represents "Mes Comptes" screen
-        case myAccounts
+        case accounts
         /// Represents the "Simulation" screen
         case simulation
         /// Represents the " À vous de jouer" screen
@@ -49,37 +51,29 @@ extension ContentView {
 
         /// The unique identifier for each case, derived from the rawValue of the enumeration.
         var id: Int { self.rawValue }
-        
         /// A computed property that returns the title associated with tab.
         var title: String {
             switch self {
-            case .myAccounts:
-                return "Mes Comptes"
-            case .simulation:
-                return "Simulation"
-            case .upToYou:
-                return "À vous de jouer"
+            case .accounts: return AppString.myAccounts
+            case .simulation: return AppString.simulation
+            case .upToYou: return AppString.upToYou
             }
         }
-        
         /// A computed property that returns the system image name associated with tab.
         /// These image name correspond to SF Symbols and can be used as icon for the tab.
         var systemImage: String {
             switch self {
-            case .myAccounts:
-                return "star.fill"
-            case .simulation:
-                return "gear"
-            case .upToYou:
-                return "flag"
+            case .accounts: return "star.fill"
+            case .simulation: return "gear"
+            case .upToYou: return "flag"
             }
         }
     }
 }
 
 // MARK: - Previews
-#if DEBUG
 #Preview {
-    ContentView(selectedTabIndex: 0)
+    NavigationStack {
+        ContentView(selectedTabIndex: 0)
+    }
 }
-#endif

@@ -8,26 +8,49 @@
 import SwiftUI
 
 struct MyAccountsView: View {
-    
-    @StateObject var viewModel = MyAccountsViewModel(accountsService: AccountsClient())
-
+    @EnvironmentObject private var coordinator: Coordinator
+    @StateObject var viewModel: MyAccountsViewModel
     var body: some View {
-        List {
-            AccountSection(header: "Credit Agricole", 
-                           accounts: viewModel.caAccounts)
-            AccountSection(header: "Autres Banques",
-                           accounts: viewModel.otherAccounts)
-        }
-        .listStyle(.sidebar)
-        .task {
+        VStack {
+            switch viewModel.state {
+            case .loading:
+                ProgressView()
+                    .accessibilityIdentifier("ProgressView")
+            case .failed(let error):
+                ErrorView(errorMessage: error) {
+                    Task{await viewModel.fetchAccounts()}
+                }.accessibilityIdentifier("ErrorView")
+            case .loaded((let caAccounts,let otherAccounts)):
+                List {
+                    AccountSection(
+                        header: AppString.caAccount,
+                        accounts: caAccounts
+                    ) { account in
+                        coordinator.push(.detail(account))
+                    }
+                    .accessibilityIdentifier("caAccountSection")
+                    AccountSection(
+                        header: AppString.otherAccount,
+                        accounts: otherAccounts
+                    ) { account in
+                        coordinator.push(.detail(account))
+                    }
+                    .accessibilityIdentifier("otherAccountSection")
+                }
+                .id(UUID())
+                .listStyle(.insetGrouped)
+            }
+        }.task {
             await viewModel.fetchAccounts()
         }
     }
 }
 
 // MARK: - Previews
-#if DEBUG
 #Preview {
-    MyAccountsView(viewModel: MyAccountsViewModel(accountsService: AccountsClient()))
+    MyAccountsView(
+        viewModel: MyAccountsViewModel(
+            accountsService: AccountsClient()
+        )
+    )
 }
-#endif

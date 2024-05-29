@@ -1,5 +1,5 @@
 //
-//  BankRowView.swift
+//  BankAccountRowView.swift
 //  Banks
 //
 //  Created by Wajih Benabdessalem on 5/24/24.
@@ -7,18 +7,23 @@
 
 import SwiftUI
 
-struct BankRowView: View {
-    
+struct BankAccountRowView: View {
     let title: String
     let accounts: [Account]
-    
+    let action: (Account) -> Void
+
     var body: some View {
         Section {
             DisclosureGroup {
                 Group {
                     ForEach(accounts, id: \.id) { account in
-                        BankItemView(title: account.label, 
-                                     price: "\(account.balance) €")
+                        Button {
+                            action(account)
+                        } label: {
+                            AccountRowView(title: account.label,
+                                         amount: account.accountBalance)
+                        }
+                        .accessibilityIdentifier("accountRow")
                     }
                 }
                 .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
@@ -33,9 +38,10 @@ struct BankRowView: View {
 }
 
 // MARK: - Previews
-#if DEBUG
 #Preview {
-    BankRowView(title: "Account title", accounts: [])
+    BankAccountRowView(title: MockData.account1.label,
+                accounts: MockData.accounts,
+                       action: { _ in
+    })
         .padding(.horizontal)
 }
-#endif

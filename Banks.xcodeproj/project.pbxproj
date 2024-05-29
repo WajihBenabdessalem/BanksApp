@@ -19,16 +19,77 @@
 		DB61A29C2BFFF7FE00E1010E /* Data+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2972BFFF7FE00E1010E /* Data+extension.swift */; };
 		DB61A2A02C00D3A700E1010E /* banks.json in Resources */ = {isa = PBXBuildFile; fileRef = DB61A29F2C00D3A600E1010E /* banks.json */; };
 		DB61A2A32C00D46C00E1010E /* MyAccountsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2A22C00D46C00E1010E /* MyAccountsViewModel.swift */; };
-		DB61A2A62C0103F300E1010E /* BankRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2A52C0103F300E1010E /* BankRowView.swift */; };
-		DB61A2A92C01045300E1010E /* BankItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2A82C01045300E1010E /* BankItemView.swift */; };
+		DB61A2A62C0103F300E1010E /* BankAccountRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2A52C0103F300E1010E /* BankAccountRowView.swift */; };
+		DB61A2A92C01045300E1010E /* AccountRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2A82C01045300E1010E /* AccountRowView.swift */; };
 		DB61A2AC2C012A8300E1010E /* AccountSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2AB2C012A8300E1010E /* AccountSection.swift */; };
+		DB61A2B02C0211F800E1010E /* AccountDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2AF2C0211F800E1010E /* AccountDetailView.swift */; };
+		DB61A2B42C02124800E1010E /* AccountDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2B32C02124800E1010E /* AccountDetailViewModel.swift */; };
+		DB61A2B62C02141700E1010E /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2B52C02141700E1010E /* MockData.swift */; };
+		DB61A2B92C02224200E1010E /* String+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2B82C02224200E1010E /* String+extension.swift */; };
+		DB61A2BB2C0231DA00E1010E /* OperationRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2BA2C0231DA00E1010E /* OperationRowView.swift */; };
+		DB61A2BD2C02917100E1010E /* Date+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2BC2C02917100E1010E /* Date+extension.swift */; };
+		DB67AB762C03EFF8003F06C8 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB67AB752C03EFF8003F06C8 /* Coordinator.swift */; };
+		DB67AB782C03F19B003F06C8 /* CoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB67AB772C03F19A003F06C8 /* CoordinatorView.swift */; };
+		DB67AB7E2C0499E4003F06C8 /* ApiConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB67AB7D2C0499E4003F06C8 /* ApiConfig.swift */; };
+		DB7239C52C0628FA0014A6BE /* APIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7239C42C0628FA0014A6BE /* APIClientTests.swift */; };
+		DB7239C62C062A3E0014A6BE /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2872BFFF4FC00E1010E /* ApiClient.swift */; };
 		DB8C4B6F2BFE7752008E3335 /* BanksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8C4B6E2BFE7752008E3335 /* BanksApp.swift */; };
 		DB8C4B712BFE7752008E3335 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8C4B702BFE7752008E3335 /* ContentView.swift */; };
 		DB8C4B732BFE7755008E3335 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB8C4B722BFE7755008E3335 /* Assets.xcassets */; };
 		DB8C4B762BFE7755008E3335 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB8C4B752BFE7755008E3335 /* Preview Assets.xcassets */; };
-		DB8C4B802BFE7756008E3335 /* BanksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8C4B7F2BFE7756008E3335 /* BanksTests.swift */; };
-		DB8C4B8A2BFE7756008E3335 /* BanksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8C4B892BFE7756008E3335 /* BanksUITests.swift */; };
 		DB8C4B8C2BFE7756008E3335 /* BanksUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8C4B8B2BFE7756008E3335 /* BanksUITestsLaunchTests.swift */; };
+		DB9D90392C0639B90003AC80 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2932BFFF5D100E1010E /* Constants.swift */; };
+		DB9D903B2C063A580003AC80 /* MockApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9D903A2C063A580003AC80 /* MockApiClient.swift */; };
+		DB9D903D2C0643530003AC80 /* CoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9D903C2C0643530003AC80 /* CoordinatorTests.swift */; };
+		DB9D903E2C0643ED0003AC80 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB67AB752C03EFF8003F06C8 /* Coordinator.swift */; };
+		DB9D90402C0648380003AC80 /* AccountDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2AF2C0211F800E1010E /* AccountDetailView.swift */; };
+		DB9D90432C0657A10003AC80 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8C4B702BFE7752008E3335 /* ContentView.swift */; };
+		DB9D90442C0657BD0003AC80 /* BanksResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2852BFFEE8800E1010E /* BanksResponse.swift */; };
+		DB9D90452C0657DD0003AC80 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2B52C02141700E1010E /* MockData.swift */; };
+		DB9D90462C06593A0003AC80 /* OperationRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2BA2C0231DA00E1010E /* OperationRowView.swift */; };
+		DB9D90472C065A1D0003AC80 /* AccountDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2B32C02124800E1010E /* AccountDetailViewModel.swift */; };
+		DB9D90482C065A4B0003AC80 /* MyAccountsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2A22C00D46C00E1010E /* MyAccountsViewModel.swift */; };
+		DB9D90492C065A690003AC80 /* AccountsClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2882BFFF4FC00E1010E /* AccountsClient.swift */; };
+		DB9D904A2C065A800003AC80 /* MyAccountsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2792BFFE62000E1010E /* MyAccountsView.swift */; };
+		DB9D904B2C065AA60003AC80 /* Date+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2BC2C02917100E1010E /* Date+extension.swift */; };
+		DB9D904C2C065AB80003AC80 /* String+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2B82C02224200E1010E /* String+extension.swift */; };
+		DB9D904D2C065AC90003AC80 /* SimulationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A27B2BFFE64300E1010E /* SimulationView.swift */; };
+		DB9D904E2C065B1B0003AC80 /* UpToYouView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A27D2BFFE65800E1010E /* UpToYouView.swift */; };
+		DB9D904F2C065B380003AC80 /* AccountSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2AB2C012A8300E1010E /* AccountSection.swift */; };
+		DB9D90502C065B430003AC80 /* AccountsEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A28B2BFFF4FD00E1010E /* AccountsEndPoint.swift */; };
+		DB9D90512C065B5A0003AC80 /* BankAccountRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2A52C0103F300E1010E /* BankAccountRowView.swift */; };
+		DB9D90522C065B720003AC80 /* AccountRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2A82C01045300E1010E /* AccountRowView.swift */; };
+		DB9D90542C0663420003AC80 /* RootViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9D90532C0663420003AC80 /* RootViewUITests.swift */; };
+		DB9D90552C066B840003AC80 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB67AB752C03EFF8003F06C8 /* Coordinator.swift */; };
+		DB9D90562C066BD60003AC80 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2B52C02141700E1010E /* MockData.swift */; };
+		DB9D90572C066C490003AC80 /* BanksResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2852BFFEE8800E1010E /* BanksResponse.swift */; };
+		DB9D90582C066C5B0003AC80 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8C4B702BFE7752008E3335 /* ContentView.swift */; };
+		DB9D90592C066C5F0003AC80 /* MyAccountsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2792BFFE62000E1010E /* MyAccountsView.swift */; };
+		DB9D905A2C066C640003AC80 /* BankAccountRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2A52C0103F300E1010E /* BankAccountRowView.swift */; };
+		DB9D905B2C066C670003AC80 /* MyAccountsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2A22C00D46C00E1010E /* MyAccountsViewModel.swift */; };
+		DB9D905C2C066C6B0003AC80 /* AccountDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2AF2C0211F800E1010E /* AccountDetailView.swift */; };
+		DB9D905D2C066C6E0003AC80 /* OperationRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2BA2C0231DA00E1010E /* OperationRowView.swift */; };
+		DB9D905E2C066C720003AC80 /* AccountDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2B32C02124800E1010E /* AccountDetailViewModel.swift */; };
+		DB9D905F2C066C770003AC80 /* SimulationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A27B2BFFE64300E1010E /* SimulationView.swift */; };
+		DB9D90602C066C7A0003AC80 /* UpToYouView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A27D2BFFE65800E1010E /* UpToYouView.swift */; };
+		DB9D90612C066C850003AC80 /* AccountRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2A82C01045300E1010E /* AccountRowView.swift */; };
+		DB9D90622C066C890003AC80 /* AccountSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2AB2C012A8300E1010E /* AccountSection.swift */; };
+		DB9D90632C066C930003AC80 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2932BFFF5D100E1010E /* Constants.swift */; };
+		DB9D90642C066CD00003AC80 /* Date+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2BC2C02917100E1010E /* Date+extension.swift */; };
+		DB9D90652C066CD30003AC80 /* String+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2B82C02224200E1010E /* String+extension.swift */; };
+		DB9D90662C066CDB0003AC80 /* Data+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2972BFFF7FE00E1010E /* Data+extension.swift */; };
+		DB9D90672C066D110003AC80 /* ApiConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB67AB7D2C0499E4003F06C8 /* ApiConfig.swift */; };
+		DB9D90682C066D150003AC80 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2872BFFF4FC00E1010E /* ApiClient.swift */; };
+		DB9D90692C066D190003AC80 /* AccountsClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2882BFFF4FC00E1010E /* AccountsClient.swift */; };
+		DB9D906A2C066D1D0003AC80 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A28A2BFFF4FD00E1010E /* EndPoint.swift */; };
+		DB9D906B2C066D210003AC80 /* AccountsEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A28B2BFFF4FD00E1010E /* AccountsEndPoint.swift */; };
+		DB9D906C2C066D770003AC80 /* Data+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A2972BFFF7FE00E1010E /* Data+extension.swift */; };
+		DB9D90702C06927E0003AC80 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9D906F2C06927E0003AC80 /* ErrorView.swift */; };
+		DB9D90712C069E450003AC80 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9D906F2C06927E0003AC80 /* ErrorView.swift */; };
+		DB9D90722C069E470003AC80 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9D906F2C06927E0003AC80 /* ErrorView.swift */; };
+		DBA143252C05EE3700784A47 /* MockEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB67AB7F2C04AF3B003F06C8 /* MockEndPoint.swift */; };
+		DBD6FC442C060043008079E7 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61A28A2BFFF4FD00E1010E /* EndPoint.swift */; };
+		DBD6FC462C060059008079E7 /* ApiConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB67AB7D2C0499E4003F06C8 /* ApiConfig.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,19 +122,32 @@
 		DB61A2972BFFF7FE00E1010E /* Data+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+extension.swift"; sourceTree = "<group>"; };
 		DB61A29F2C00D3A600E1010E /* banks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = banks.json; sourceTree = "<group>"; };
 		DB61A2A22C00D46C00E1010E /* MyAccountsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountsViewModel.swift; sourceTree = "<group>"; };
-		DB61A2A52C0103F300E1010E /* BankRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankRowView.swift; sourceTree = "<group>"; };
-		DB61A2A82C01045300E1010E /* BankItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankItemView.swift; sourceTree = "<group>"; };
+		DB61A2A52C0103F300E1010E /* BankAccountRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankAccountRowView.swift; sourceTree = "<group>"; };
+		DB61A2A82C01045300E1010E /* AccountRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRowView.swift; sourceTree = "<group>"; };
 		DB61A2AB2C012A8300E1010E /* AccountSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSection.swift; sourceTree = "<group>"; };
+		DB61A2AF2C0211F800E1010E /* AccountDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetailView.swift; sourceTree = "<group>"; };
+		DB61A2B32C02124800E1010E /* AccountDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetailViewModel.swift; sourceTree = "<group>"; };
+		DB61A2B52C02141700E1010E /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		DB61A2B82C02224200E1010E /* String+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+extension.swift"; sourceTree = "<group>"; };
+		DB61A2BA2C0231DA00E1010E /* OperationRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationRowView.swift; sourceTree = "<group>"; };
+		DB61A2BC2C02917100E1010E /* Date+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+extension.swift"; sourceTree = "<group>"; };
+		DB67AB752C03EFF8003F06C8 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		DB67AB772C03F19A003F06C8 /* CoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorView.swift; sourceTree = "<group>"; };
+		DB67AB7D2C0499E4003F06C8 /* ApiConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConfig.swift; sourceTree = "<group>"; };
+		DB67AB7F2C04AF3B003F06C8 /* MockEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockEndPoint.swift; sourceTree = "<group>"; };
+		DB7239C42C0628FA0014A6BE /* APIClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientTests.swift; sourceTree = "<group>"; };
 		DB8C4B6B2BFE7752008E3335 /* Banks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Banks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB8C4B6E2BFE7752008E3335 /* BanksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanksApp.swift; sourceTree = "<group>"; };
 		DB8C4B702BFE7752008E3335 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DB8C4B722BFE7755008E3335 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB8C4B752BFE7755008E3335 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DB8C4B7B2BFE7756008E3335 /* BanksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BanksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB8C4B7F2BFE7756008E3335 /* BanksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanksTests.swift; sourceTree = "<group>"; };
 		DB8C4B852BFE7756008E3335 /* BanksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BanksUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB8C4B892BFE7756008E3335 /* BanksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanksUITests.swift; sourceTree = "<group>"; };
 		DB8C4B8B2BFE7756008E3335 /* BanksUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanksUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DB9D903A2C063A580003AC80 /* MockApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockApiClient.swift; sourceTree = "<group>"; };
+		DB9D903C2C0643530003AC80 /* CoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorTests.swift; sourceTree = "<group>"; };
+		DB9D90532C0663420003AC80 /* RootViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewUITests.swift; sourceTree = "<group>"; };
+		DB9D906F2C06927E0003AC80 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +180,7 @@
 			children = (
 				DB8C4B702BFE7752008E3335 /* ContentView.swift */,
 				DB61A27F2BFFE7D500E1010E /* MyAccounts */,
+				DB61A2AE2C0211C300E1010E /* AccountDetail */,
 				DB61A2802BFFE7F500E1010E /* Simulation */,
 				DB61A2812BFFE82000E1010E /* UpToYou */,
 			);
@@ -148,6 +223,7 @@
 		DB61A2832BFFE9DF00E1010E /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				DB67AB7D2C0499E4003F06C8 /* ApiConfig.swift */,
 				DB61A2892BFFF4FC00E1010E /* ApiClients */,
 				DB61A28C2BFFF4FD00E1010E /* EndPoints */,
 			);
@@ -192,6 +268,8 @@
 			isa = PBXGroup;
 			children = (
 				DB61A2972BFFF7FE00E1010E /* Data+extension.swift */,
+				DB61A2B82C02224200E1010E /* String+extension.swift */,
+				DB61A2BC2C02917100E1010E /* Date+extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -209,7 +287,7 @@
 			isa = PBXGroup;
 			children = (
 				DB61A2792BFFE62000E1010E /* MyAccountsView.swift */,
-				DB61A2A52C0103F300E1010E /* BankRowView.swift */,
+				DB61A2A52C0103F300E1010E /* BankAccountRowView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -225,10 +303,45 @@
 		DB61A2AD2C012AF300E1010E /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
-				DB61A2A82C01045300E1010E /* BankItemView.swift */,
+				DB61A2A82C01045300E1010E /* AccountRowView.swift */,
 				DB61A2AB2C012A8300E1010E /* AccountSection.swift */,
+				DB9D906F2C06927E0003AC80 /* ErrorView.swift */,
 			);
 			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		DB61A2AE2C0211C300E1010E /* AccountDetail */ = {
+			isa = PBXGroup;
+			children = (
+				DB61A2B12C02120800E1010E /* View */,
+				DB61A2B22C02121E00E1010E /* ViewModel */,
+			);
+			path = AccountDetail;
+			sourceTree = "<group>";
+		};
+		DB61A2B12C02120800E1010E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DB61A2AF2C0211F800E1010E /* AccountDetailView.swift */,
+				DB61A2BA2C0231DA00E1010E /* OperationRowView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DB61A2B22C02121E00E1010E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DB61A2B32C02124800E1010E /* AccountDetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DB61A2B72C02146A00E1010E /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				DB61A2B52C02141700E1010E /* MockData.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		DB8C4B622BFE7751008E3335 = {
@@ -238,6 +351,7 @@
 				DB8C4B7E2BFE7756008E3335 /* BanksTests */,
 				DB8C4B882BFE7756008E3335 /* BanksUITests */,
 				DB8C4B6C2BFE7752008E3335 /* Products */,
+				DBA143202C05ED1F00784A47 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -257,9 +371,11 @@
 				DB61A2822BFFE9C800E1010E /* App */,
 				DB61A2842BFFE9FD00E1010E /* Models */,
 				DB61A2832BFFE9DF00E1010E /* Networking */,
+				DBDE085E2C0395EC00DBC90F /* AppCoordinator */,
 				DB61A2782BFFE60C00E1010E /* Screens */,
 				DB61A2AD2C012AF300E1010E /* UIComponents */,
 				DB61A2942BFFF5D100E1010E /* Utils */,
+				DB61A2B72C02146A00E1010E /* Helper */,
 				DB61A29A2BFFF7FE00E1010E /* Extensions */,
 				DB61A2A12C00D3B200E1010E /* Ressources */,
 				DB8C4B742BFE7755008E3335 /* Preview Content */,
@@ -278,7 +394,10 @@
 		DB8C4B7E2BFE7756008E3335 /* BanksTests */ = {
 			isa = PBXGroup;
 			children = (
-				DB8C4B7F2BFE7756008E3335 /* BanksTests.swift */,
+				DB67AB7F2C04AF3B003F06C8 /* MockEndPoint.swift */,
+				DB9D903A2C063A580003AC80 /* MockApiClient.swift */,
+				DB7239C42C0628FA0014A6BE /* APIClientTests.swift */,
+				DB9D903C2C0643530003AC80 /* CoordinatorTests.swift */,
 			);
 			path = BanksTests;
 			sourceTree = "<group>";
@@ -286,10 +405,26 @@
 		DB8C4B882BFE7756008E3335 /* BanksUITests */ = {
 			isa = PBXGroup;
 			children = (
-				DB8C4B892BFE7756008E3335 /* BanksUITests.swift */,
+				DB9D90532C0663420003AC80 /* RootViewUITests.swift */,
 				DB8C4B8B2BFE7756008E3335 /* BanksUITestsLaunchTests.swift */,
 			);
 			path = BanksUITests;
+			sourceTree = "<group>";
+		};
+		DBA143202C05ED1F00784A47 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DBDE085E2C0395EC00DBC90F /* AppCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				DB67AB752C03EFF8003F06C8 /* Coordinator.swift */,
+				DB67AB772C03F19A003F06C8 /* CoordinatorView.swift */,
+			);
+			path = AppCoordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,8 +441,13 @@
 			buildRules = (
 			);
 			dependencies = (
+				DB25E8982C05F77F005B2652 /* PBXTargetDependency */,
+				DB25E89A2C05F77F005B2652 /* PBXTargetDependency */,
+				DBDE08652C03BB0B00DBC90F /* PBXTargetDependency */,
 			);
 			name = Banks;
+			packageProductDependencies = (
+			);
 			productName = Banks;
 			productReference = DB8C4B6B2BFE7752008E3335 /* Banks.app */;
 			productType = "com.apple.product-type.application";
@@ -326,6 +466,8 @@
 				DB8C4B7D2BFE7756008E3335 /* PBXTargetDependency */,
 			);
 			name = BanksTests;
+			packageProductDependencies = (
+			);
 			productName = BanksTests;
 			productReference = DB8C4B7B2BFE7756008E3335 /* BanksTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -344,6 +486,8 @@
 				DB8C4B872BFE7756008E3335 /* PBXTargetDependency */,
 			);
 			name = BanksUITests;
+			packageProductDependencies = (
+			);
 			productName = BanksUITests;
 			productReference = DB8C4B852BFE7756008E3335 /* BanksUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -380,6 +524,8 @@
 				Base,
 			);
 			mainGroup = DB8C4B622BFE7751008E3335;
+			packageReferences = (
+			);
 			productRefGroup = DB8C4B6C2BFE7752008E3335 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -428,17 +574,27 @@
 				DB61A2A32C00D46C00E1010E /* MyAccountsViewModel.swift in Sources */,
 				DB61A2952BFFF5D100E1010E /* Constants.swift in Sources */,
 				DB8C4B712BFE7752008E3335 /* ContentView.swift in Sources */,
-				DB61A2A92C01045300E1010E /* BankItemView.swift in Sources */,
+				DB61A2A92C01045300E1010E /* AccountRowView.swift in Sources */,
 				DB8C4B6F2BFE7752008E3335 /* BanksApp.swift in Sources */,
+				DB61A2BD2C02917100E1010E /* Date+extension.swift in Sources */,
 				DB61A28F2BFFF4FD00E1010E /* EndPoint.swift in Sources */,
+				DB61A2BB2C0231DA00E1010E /* OperationRowView.swift in Sources */,
+				DB67AB762C03EFF8003F06C8 /* Coordinator.swift in Sources */,
+				DB9D90702C06927E0003AC80 /* ErrorView.swift in Sources */,
+				DB67AB782C03F19B003F06C8 /* CoordinatorView.swift in Sources */,
+				DB61A2B62C02141700E1010E /* MockData.swift in Sources */,
 				DB61A28E2BFFF4FD00E1010E /* AccountsClient.swift in Sources */,
+				DB61A2B42C02124800E1010E /* AccountDetailViewModel.swift in Sources */,
+				DB67AB7E2C0499E4003F06C8 /* ApiConfig.swift in Sources */,
 				DB61A27E2BFFE65800E1010E /* UpToYouView.swift in Sources */,
 				DB61A29C2BFFF7FE00E1010E /* Data+extension.swift in Sources */,
 				DB61A27A2BFFE62000E1010E /* MyAccountsView.swift in Sources */,
 				DB61A2902BFFF4FD00E1010E /* AccountsEndPoint.swift in Sources */,
 				DB61A2862BFFEE8800E1010E /* BanksResponse.swift in Sources */,
 				DB61A27C2BFFE64300E1010E /* SimulationView.swift in Sources */,
-				DB61A2A62C0103F300E1010E /* BankRowView.swift in Sources */,
+				DB61A2B92C02224200E1010E /* String+extension.swift in Sources */,
+				DB61A2B02C0211F800E1010E /* AccountDetailView.swift in Sources */,
+				DB61A2A62C0103F300E1010E /* BankAccountRowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,7 +602,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB8C4B802BFE7756008E3335 /* BanksTests.swift in Sources */,
+				DB9D90492C065A690003AC80 /* AccountsClient.swift in Sources */,
+				DB9D903D2C0643530003AC80 /* CoordinatorTests.swift in Sources */,
+				DB9D904A2C065A800003AC80 /* MyAccountsView.swift in Sources */,
+				DB9D90432C0657A10003AC80 /* ContentView.swift in Sources */,
+				DBA143252C05EE3700784A47 /* MockEndPoint.swift in Sources */,
+				DBD6FC442C060043008079E7 /* EndPoint.swift in Sources */,
+				DB9D90452C0657DD0003AC80 /* MockData.swift in Sources */,
+				DB9D90442C0657BD0003AC80 /* BanksResponse.swift in Sources */,
+				DB9D90482C065A4B0003AC80 /* MyAccountsViewModel.swift in Sources */,
+				DB9D90472C065A1D0003AC80 /* AccountDetailViewModel.swift in Sources */,
+				DB9D90502C065B430003AC80 /* AccountsEndPoint.swift in Sources */,
+				DB9D90722C069E470003AC80 /* ErrorView.swift in Sources */,
+				DB9D903B2C063A580003AC80 /* MockApiClient.swift in Sources */,
+				DB9D90462C06593A0003AC80 /* OperationRowView.swift in Sources */,
+				DB9D904E2C065B1B0003AC80 /* UpToYouView.swift in Sources */,
+				DB7239C62C062A3E0014A6BE /* ApiClient.swift in Sources */,
+				DB9D90402C0648380003AC80 /* AccountDetailView.swift in Sources */,
+				DB9D904F2C065B380003AC80 /* AccountSection.swift in Sources */,
+				DB7239C52C0628FA0014A6BE /* APIClientTests.swift in Sources */,
+				DB9D904B2C065AA60003AC80 /* Date+extension.swift in Sources */,
+				DB9D904C2C065AB80003AC80 /* String+extension.swift in Sources */,
+				DBD6FC462C060059008079E7 /* ApiConfig.swift in Sources */,
+				DB9D904D2C065AC90003AC80 /* SimulationView.swift in Sources */,
+				DB9D90512C065B5A0003AC80 /* BankAccountRowView.swift in Sources */,
+				DB9D90522C065B720003AC80 /* AccountRowView.swift in Sources */,
+				DB9D90392C0639B90003AC80 /* Constants.swift in Sources */,
+				DB9D903E2C0643ED0003AC80 /* Coordinator.swift in Sources */,
+				DB9D90662C066CDB0003AC80 /* Data+extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,14 +637,46 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB9D90622C066C890003AC80 /* AccountSection.swift in Sources */,
+				DB9D905E2C066C720003AC80 /* AccountDetailViewModel.swift in Sources */,
+				DB9D90592C066C5F0003AC80 /* MyAccountsView.swift in Sources */,
+				DB9D905D2C066C6E0003AC80 /* OperationRowView.swift in Sources */,
+				DB9D90692C066D190003AC80 /* AccountsClient.swift in Sources */,
+				DB9D90552C066B840003AC80 /* Coordinator.swift in Sources */,
+				DB9D90672C066D110003AC80 /* ApiConfig.swift in Sources */,
+				DB9D905B2C066C670003AC80 /* MyAccountsViewModel.swift in Sources */,
 				DB8C4B8C2BFE7756008E3335 /* BanksUITestsLaunchTests.swift in Sources */,
-				DB8C4B8A2BFE7756008E3335 /* BanksUITests.swift in Sources */,
+				DB9D90582C066C5B0003AC80 /* ContentView.swift in Sources */,
+				DB9D905C2C066C6B0003AC80 /* AccountDetailView.swift in Sources */,
+				DB9D90712C069E450003AC80 /* ErrorView.swift in Sources */,
+				DB9D90542C0663420003AC80 /* RootViewUITests.swift in Sources */,
+				DB9D90682C066D150003AC80 /* ApiClient.swift in Sources */,
+				DB9D90572C066C490003AC80 /* BanksResponse.swift in Sources */,
+				DB9D906B2C066D210003AC80 /* AccountsEndPoint.swift in Sources */,
+				DB9D905F2C066C770003AC80 /* SimulationView.swift in Sources */,
+				DB9D905A2C066C640003AC80 /* BankAccountRowView.swift in Sources */,
+				DB9D90562C066BD60003AC80 /* MockData.swift in Sources */,
+				DB9D906A2C066D1D0003AC80 /* EndPoint.swift in Sources */,
+				DB9D90642C066CD00003AC80 /* Date+extension.swift in Sources */,
+				DB9D906C2C066D770003AC80 /* Data+extension.swift in Sources */,
+				DB9D90652C066CD30003AC80 /* String+extension.swift in Sources */,
+				DB9D90602C066C7A0003AC80 /* UpToYouView.swift in Sources */,
+				DB9D90612C066C850003AC80 /* AccountRowView.swift in Sources */,
+				DB9D90632C066C930003AC80 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		DB25E8982C05F77F005B2652 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = DB25E8972C05F77F005B2652 /* LintError */;
+		};
+		DB25E89A2C05F77F005B2652 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = DB25E8992C05F77F005B2652 /* LintWarning */;
+		};
 		DB8C4B7D2BFE7756008E3335 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = DB8C4B6A2BFE7752008E3335 /* Banks */;
@@ -471,6 +686,10 @@
 			isa = PBXTargetDependency;
 			target = DB8C4B6A2BFE7752008E3335 /* Banks */;
 			targetProxy = DB8C4B862BFE7756008E3335 /* PBXContainerItemProxy */;
+		};
+		DBDE08652C03BB0B00DBC90F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = DBDE08642C03BB0B00DBC90F /* SwiftLintBuildToolPlugin */;
 		};
 /* End PBXTargetDependency section */
 
@@ -673,6 +892,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = benabdessalemwajih.dev.BanksTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -693,6 +916,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = benabdessalemwajih.dev.BanksTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -711,6 +938,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = benabdessalemwajih.dev.BanksUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -729,6 +960,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = benabdessalemwajih.dev.BanksUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -776,6 +1011,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DB25E88D2C05F3D8005B2652 /* XCRemoteSwiftPackageReference "Quick" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Quick.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		DBDE085F2C03BAC400DBC90F /* XCRemoteSwiftPackageReference "SwiftLint" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/SwiftLint";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.55.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DB25E8972C05F77F005B2652 /* LintError */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DB25E88D2C05F3D8005B2652 /* XCRemoteSwiftPackageReference "Quick" */;
+			productName = "plugin:LintError";
+		};
+		DB25E8992C05F77F005B2652 /* LintWarning */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DB25E88D2C05F3D8005B2652 /* XCRemoteSwiftPackageReference "Quick" */;
+			productName = "plugin:LintWarning";
+		};
+		DBDE08642C03BB0B00DBC90F /* SwiftLintBuildToolPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DBDE085F2C03BAC400DBC90F /* XCRemoteSwiftPackageReference "SwiftLint" */;
+			productName = "plugin:SwiftLintBuildToolPlugin";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DB8C4B632BFE7751008E3335 /* Project object */;
 }
