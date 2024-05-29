@@ -7,11 +7,11 @@
 
 import Foundation
 
-extension Data {
+public extension Data {
     /// Convert the Data to a JSON string format.
     ///
     /// - Returns: String presenting the json data.
-    public var prettyJson: String? {
+    var prettyJson: String? {
         guard let object = try? JSONSerialization.jsonObject(with: self, options: []),
               let data = try? JSONSerialization
                              .data(withJSONObject: object, options: [.prettyPrinted])

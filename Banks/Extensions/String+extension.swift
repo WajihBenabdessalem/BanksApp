@@ -11,7 +11,7 @@ extension String {
     /// Convert the string date to date.
     /// 
     /// - Returns: The date format of the string date in "dd/MM/yyyy" format .
-    func toDate() -> Date? {
+   public func toDate() -> Date? {
         let formatDate = DateFormatter()
         formatDate.dateFormat = "dd/MM/yyyy"
         return formatDate.date(from: self)

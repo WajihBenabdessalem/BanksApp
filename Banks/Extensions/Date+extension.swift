@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension Date {
+public extension Date {
     /// Convert the date to a string date.
     ///
     /// - Returns: A string type of the date in "dd/MM/yyyy" format .
