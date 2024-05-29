@@ -17,4 +17,5 @@ struct AppString {
     static let invalidResponse = "There is no valid data, please try again."
     static let requestFailed = "Sorry for the inconvinience, server is not reachable."
     static let connectionError = "Your internet connection appears to be offline. Please try again."
+    static let errorMessage = "Something went wrong. Please try again."
 }

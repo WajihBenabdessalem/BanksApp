@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ErrorView: View {
     let errorMessage: String
-    let onRetry: (() -> Void)?
+    let onRetry: () -> Void
     
     var body: some View {
         VStack(spacing: 16) {
@@ -18,7 +18,7 @@ struct ErrorView: View {
                 .scaledToFit()
                 .frame(width: 50, height: 50)
                 .foregroundColor(.red)
-            Text("Error")
+            Text("Oops")
                 .font(.title)
                 .fontWeight(.bold)
                 .foregroundColor(.red)
@@ -26,15 +26,13 @@ struct ErrorView: View {
                 .font(.body)
                 .multilineTextAlignment(.center)
                 .padding(.horizontal)
-            if let onRetry = onRetry {
-                Button(action: onRetry) {
-                    Text("Retry")
-                        .font(.headline)
-                        .padding()
-                        .background(Color.blue)
-                        .foregroundColor(.white)
-                        .cornerRadius(8)
-                }
+            Button(action: onRetry) {
+                Text("Retry")
+                    .font(.headline)
+                    .padding()
+                    .background(Color.blue)
+                    .foregroundColor(.white)
+                    .cornerRadius(8)
             }
         }
         .padding()
@@ -46,7 +44,7 @@ struct ErrorView: View {
 }
 
 #Preview {
-    ErrorView(errorMessage: "Something went wrong. Please try again later.", onRetry: {
+    ErrorView(errorMessage: AppString.errorMessage, onRetry: {
         print("Retry button tapped")
     })
 }

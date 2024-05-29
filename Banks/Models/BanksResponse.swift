@@ -17,7 +17,7 @@ struct Accounts: Codable, Equatable, Hashable {
 }
 
 // MARK: - Account
-struct Account: Codable, Identifiable, Equatable, Hashable {
+struct Account: Codable, Identifiable, Hashable {
     let balance: Double
     let contractNumber, holder, id, label: String
     let operations: [Operation]

@@ -25,6 +25,7 @@ struct AccountSection: View {
                 ) { account in
                     action(account)
                 }
+                .accessibilityIdentifier("bankAccountSection")
             }
         }
         .headerProminence(.increased)

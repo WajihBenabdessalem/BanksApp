@@ -41,4 +41,5 @@ struct MockData {
                                      id: "4",
                                      title: "CB Amazon")
     static let accounts = [account1, account2]
+    static let accountsResponse = Accounts(accounts: accounts, isCA: 1, name: "")
 }
