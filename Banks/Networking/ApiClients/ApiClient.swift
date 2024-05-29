@@ -12,7 +12,7 @@ import Foundation
 protocol ApiService {
     ///  Making
     /// - Parameters:
-    ///   - endPoint: Endpoint of type
+    ///   - endPoint: of type Endpoint 
     ///   - urlSession:  configured Session is an optional
     /// - Returns: returns the decodable of type model
     func request<T: Decodable>(endPoint: EndPoint) async throws -> T
